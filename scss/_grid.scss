@@ -1,0 +1,142 @@
+/*   GRID
+______________________ */
+
+
+.grid {
+  @extend %displayFlex;
+  zoom: 1;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+[class*="grid__col-"] {
+  @extend %displayFlex;
+  zoom: 1;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  vertical-align: top;
+}
+
+// Mixin for Grid Columns
+@mixin grid__col($var: null) {
+  .grid__col-#{$var}auto {
+    -webkit-flex: 1 0 0px;
+        -ms-flex: 1 0 auto;
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0px;  
+    width: auto;
+    max-width: 100%;
+  }
+  .grid__col-#{$var}1 {
+    width: 8.33333333%;
+  }
+  .grid__col-#{$var}2 {
+    width: 16.66666667%;
+  }
+  .grid__col-#{$var}3 {
+    width: 25%;
+  }
+  .grid__col-#{$var}4 {
+    width: 33.33333333%;
+  }
+  .grid__col-#{$var}5 {
+    width: 41.66666667%;
+  }
+  .grid__col-#{$var}6 {
+    width: 50%;
+  }
+  .grid__col-#{$var}7 {
+    width: 58.33333333%;
+  }
+  .grid__col-#{$var}8 {
+    width: 66.66666667%;
+  }
+  .grid__col-#{$var}9 {
+    width: 75%;
+  }
+  .grid__col-#{$var}10 {
+    width: 83.33333333%;
+  }
+  .grid__col-#{$var}11 {
+    width: 91.66666667%;
+  }
+  .grid__col-#{$var}12 {
+    width: 100%;
+  }
+}
+
+// Mixin for Grid Columns Offset
+@mixin grid__col-offset($var: null) {
+  .grid__col-#{$var}offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .grid__col-#{$var}offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .grid__col-#{$var}offset-3 {
+    margin-left: 25%;
+  }
+  .grid__col-#{$var}offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .grid__col-#{$var}offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .grid__col-#{$var}offset-6 {
+    margin-left: 50%;
+  }
+  .grid__col-#{$var}offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .grid__col-#{$var}offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .grid__col-#{$var}offset-9 {
+    margin-left: 75%;
+  }
+  .grid__col-#{$var}offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .grid__col-#{$var}offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .grid__col-#{$var}offset-12 {
+    margin-left: 100%;
+  }
+}
+
+
+// Grid Column Declarations
+@include grid__col;
+  
+// Grid Offset Declarations
+@include grid__col-offset;
+
+
+// Viewport Declarations
+@media only screen and (max-width: $screen-xs-max) {
+  @include grid__col(xs-);
+  
+  @include grid__col-offset(xs-);
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+  @include grid__col(sm-);
+  
+  @include grid__col-offset(sm-);
+}
+
+@media only screen and (min-width: $screen-md-min) {
+  @include grid__col(md-);
+  
+  @include grid__col-offset(md-);
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+  @include grid__col(lg-);
+  
+  @include grid__col-offset(lg-);
+}

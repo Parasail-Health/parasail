@@ -1,0 +1,85 @@
+/*   FLEXBOX MAGIC
+______________________ */
+
+
+%displayFlex {
+  // display: inline-block added for IE support
+  display: inline-block;
+  display: flex;
+}
+
+// Flex Flow
+.direction-row {
+  flex-direction: row;
+}
+.direction-row-reverse {
+  flex-direction: row-reverse;
+}
+.direction-column {
+  flex-direction: column;
+}
+.direction-column-reverse {
+  flex-direction: column-reverse;
+}
+
+// Flex Wrap
+.nowrap {
+  flex-wrap: nowrap;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+// Align Flex Items - Horizontally
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+.justify-space-around {
+  justify-content: space-around;
+}
+
+// Align Flex Items - Vertically
+.align-stretch {
+  align-items: stretch;
+}
+.align-start {
+  align-items: flex-start;
+}
+.align-end {
+  align-items: flex-end;
+}
+.align-center {
+  align-items: center;
+}
+.align-baseline {
+  align-items: baseline;
+}
+
+// Align Individual Flex Item - Vertically
+.align-self-stretch {
+  align-self: stretch;
+}
+.align-self-start {
+  align-self: flex-start;
+}
+.align-self-end {
+  align-self: flex-end;
+}
+.align-self-center {
+  align-self: center;
+}
+.align-self-baseline {
+  align-self: baseline;
+}  

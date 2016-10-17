@@ -1,0 +1,85 @@
+/*   FORMS
+______________________ */
+
+
+.form__label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: $label--color;
+}
+
+%inputStyle {
+  font-family: $font--primary;
+  background: #fff;
+  border: 1px solid $input--border;
+  border-radius: 0;
+}
+
+.form__input {
+  @extend %inputStyle;
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding: 10px 16px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+  color: $input__text;
+  @include transition;
+  &:focus {
+    border-color: $input--border-active;
+    @include transition;
+  }
+}
+
+// Replaces the ugly default dropdown arrow
+select.form__input {
+  background-image: linear-gradient(45deg,transparent 50%,#3d2566 50%),linear-gradient(135deg,#3d2566 50%,transparent 50%);
+  background-position: calc(100% - 20px) calc(1em + 2px),calc(100% - 15px) calc(1em + 2px);
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+}
+
+// For FE: Removes the dotted line around a selected element
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 $input__text;
+}
+
+.form__radio-btn {
+  position: relative;
+  label {
+    @extend %displayFlex;
+    @extend %inputStyle;
+    justify-content: center;
+    padding: 10px;
+    color: $input__text;
+    @include transition;
+  }
+
+  // Overlay the input: when clicked on the
+  // matching label the input still gets selected
+  input {
+    @extend %inputStyle;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-appearance: none;
+  }
+  &:hover {
+    cursor: pointer;
+    label {
+      background: $input--background-radio;
+      color: #fff;
+      @include transition;
+    }
+    input {
+      cursor: pointer;
+    }
+  }
+}
+
+

@@ -1,0 +1,20 @@
+/*   LISTS
+______________________ */
+
+
+%lists {
+  list-style-position: inside;
+  li {
+    line-height: 2;
+  }
+}
+
+.ordered-list {
+  @extend %lists;
+  list-style-type: decimal;
+}
+
+.unordered-list {
+  @extend %lists;
+  list-style-type: disc;
+}

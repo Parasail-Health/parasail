@@ -1,0 +1,45 @@
+/*   ICONS
+______________________ */
+
+
+%icon {
+  @extend %displayFlex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon__arrow {
+  @extend %icon;
+  width: 40px;
+  height: 40px;
+  font-family: Arial;
+  font-size: 28px;
+  font-weight: 100;
+  line-height: 1;
+  background: $parasail-green;
+  color: #fff;
+  border-radius: 26px;
+  @include transform(rotate(-45deg));
+  @include transition;
+  &:hover {
+    cursor: pointer;
+    background: darken($parasail-green, 5%);
+    @include transition;
+  }
+}
+
+.icon__close {
+  font-size: 28px;
+  font-weight: 600;
+  color: $parasail-grey;
+}
+
+.icon__question-mark {
+  @extend %icon;
+  width: 27px;
+  height: 27px;
+  font-family: $font--secondary;
+  color: #ccc;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+}

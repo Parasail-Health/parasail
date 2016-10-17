@@ -1,0 +1,75 @@
+/*   MIXINS
+______________________ */
+
+
+@mixin box-shadow($shadow: 0 8px 6px -6px #3d2665) {
+  box-shadow: $shadow;
+}
+
+@mixin container($maxWidth: 1200px, $margin: 0 auto) {
+  width: 85%;
+  max-width: $maxWidth;
+  margin: $margin;
+}
+
+@mixin keyframes($name) {
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin logo($url: $logo--parasail, $width: 222px, $height: 27px ) {
+  display: block;
+  width: $width;
+  height: $height;
+  text-indent: -9999px;
+  &:before {
+    float: left;
+    display: block;
+    width: $width;
+    height: $height;
+    content: '';
+    background: $url;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    text-indent: 0;
+  }
+}
+
+@mixin placeholder-text($placeholder: $text--placeholder) {
+  ::-webkit-input-placeholder {
+    color: $placeholder;
+  }
+  ::-moz-placeholder {
+    color: $placeholder;  
+  }
+  :-moz-placeholder {
+    color: $placeholder;  
+  }
+  :-ms-input-placeholder {  
+    color: $placeholder;  
+  }
+}
+
+@mixin transform($transform: rotate(45deg)) {
+  -webkit-transform: $transform;
+     -moz-transform: $transform;
+          transform: $transform;
+}
+
+@mixin transition($transition: all .5s) {
+  -webkit-transition: $transition;
+          transition: $transition;
+}

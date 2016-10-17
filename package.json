@@ -1,0 +1,23 @@
+{
+  "name": "ph-css",
+  "version": "1.0.0",
+  "description": "Parasail Health - CSS Library",
+  "main": "css/parasail.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss/parasail.scss css/parasail.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Parasail-Health/ph-css.git"
+  },
+  "author": "Parasail Health",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Parasail-Health/ph-css/issues"
+  },
+  "homepage": "https://github.com/Parasail-Health/ph-css#readme",
+  "devDependencies": {
+    "sass": "^0.5.0"
+  }
+}

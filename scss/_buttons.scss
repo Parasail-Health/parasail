@@ -1,0 +1,54 @@
+/*   BUTTONS
+______________________ */
+
+
+%btn {
+  display: block;
+  width: 100%;
+  max-width: 345px;
+  font-family: $font--secondary;
+  font-size: 18px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 11px 16px;
+  color: $btn__text;
+  border-radius: 24px;
+  @include transition;
+  &:hover {
+    cursor: pointer;
+    @include transition;
+  }
+}
+
+.btn--green {
+  @extend %btn;
+  background: $btn--primary;
+  &:hover {
+    background: darken($btn--primary, 5%);
+  }
+}
+
+.btn--inactive {
+  @extend %btn;
+  background: $btn--inactive;
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+.btn--purple {
+  @extend %btn;
+  background: $btn--secondary;
+  &:hover {
+    background: darken($btn--secondary, 5%);
+  }
+}
+
+.btn--help {
+  @extend %btn;
+  background: $btn--help;
+  border: 2px solid darken($btn--help, 10%);
+  &:hover {
+    background: darken($btn--help, 10%);
+  }
+}

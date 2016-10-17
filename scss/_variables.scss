@@ -1,0 +1,55 @@
+/*   VARIABLES
+______________________ */
+
+
+// --- Breakpoints --- 
+
+$screen-sm-min: 768px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-lg-min: 1200px;
+$screen-md-max: ($screen-lg-min - 1);
+
+
+
+// ----- Colors ------ 
+
+// Buttons
+$btn--primary: $parasail-green;
+$btn--secondary: $parasail-purple;
+$btn--inactive: $parasail-green-light;
+$btn--help: $parasail-red;
+$btn__text: #fff;
+
+// Forms
+$label--color: $parasail-grey;
+$input__text: $parasail-purple;
+$input__placeholder: $parasail-grey;
+$input--background: #fff;
+$input--background-radio: $parasail-green;
+$input--border: #ebe9f0;
+$input--border-active: $parasail-purple;
+
+// Text
+$text--regular: $parasail-grey;
+$text--highlighted: $parasail-purple;
+$text--link: $parasail-green;
+$text--placeholder: $parasail-grey-dark; 
+$text--footer: $parasail-grey-dark;
+
+
+
+// ------ Fonts ------ 
+
+$font--primary: 'Akkurat Light Pro';
+$font--secondary: 'Akkurat Pro';
+
+
+
+// ------ Logos ------ 
+
+$logo--parasail: url('../img/logo_parasail.png');
+$logo--avant: url('../img/logo_avant.png');
+$logo--pave: url('../img/logo_pave.png');
+$logo--prosper: url('../img/logo_prosper.png');

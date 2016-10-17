@@ -1,0 +1,13 @@
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Libraries
+node_modules/
+
+# OSX
+.DS_Store
+
+# SASS Cache
+.sass-cache/
