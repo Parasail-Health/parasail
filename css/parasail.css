@@ -153,17 +153,23 @@ ______________________ */
 
 /*   FORMS
 ______________________ */
-.form__label {
-  display: block;
-  font-size: 16px;
-  margin-bottom: 5px;
-  color: #808184; }
-
 .form__input, .form__radio-btn label, .form__radio-btn input {
   font-family: "Akkurat Light Pro";
   background: #fff;
   border: 1px solid #ebe9f0;
   border-radius: 0; }
+
+.form__radio-btn input[type=radio]:checked + label, .form__radio-btn:hover label {
+  background: #1ea98f;
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
+
+.form__label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #808184; }
 
 .form__input {
   font-size: 18px;
@@ -208,11 +214,6 @@ select:-moz-focusring {
     -webkit-appearance: none; }
   .form__radio-btn:hover {
     cursor: pointer; }
-    .form__radio-btn:hover label {
-      background: #1ea98f;
-      color: #fff;
-      -webkit-transition: all 0.5s;
-      transition: all 0.5s; }
     .form__radio-btn:hover input {
       cursor: pointer; }
 

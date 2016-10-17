@@ -2,18 +2,24 @@
 ______________________ */
 
 
-.form__label {
-  display: block;
-  font-size: 16px;
-  margin-bottom: 5px;
-  color: $label--color;
-}
-
 %inputStyle {
   font-family: $font--primary;
   background: #fff;
   border: 1px solid $input--border;
   border-radius: 0;
+}
+
+%checkedRadioBtn {
+  background: $input--background-radio;
+  color: #fff;
+  @include transition;
+}
+
+.form__label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: $label--color;
 }
 
 .form__input {
@@ -69,17 +75,16 @@ select:-moz-focusring {
     opacity: 0;
     -webkit-appearance: none;
   }
+  input[type=radio]:checked + label {
+    @extend %checkedRadioBtn;
+  }
   &:hover {
     cursor: pointer;
     label {
-      background: $input--background-radio;
-      color: #fff;
-      @include transition;
+      @extend %checkedRadioBtn;
     }
     input {
       cursor: pointer;
     }
   }
 }
-
-
