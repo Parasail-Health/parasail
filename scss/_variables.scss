@@ -16,8 +16,8 @@ $screen-md-max: ($screen-lg-min - 1);
 // ----- Colors ------ 
 
 // Buttons
-$btn--primary: $parasail-green;
-$btn--secondary: $parasail-purple;
+$btn--default: $parasail-green;
+$btn--primary: $parasail-purple;
 $btn--inactive: $parasail-green-light;
 $btn--help: $parasail-red;
 $btn__text: #fff;

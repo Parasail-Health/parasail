@@ -112,7 +112,7 @@ table {
 
 /*   BUTTONS
 ______________________ */
-.btn--green, .btn--inactive, .btn--purple, .btn--help {
+.btn--default, .btn--inactive, .btn--primary, .btn--help {
   display: block;
   width: 100%;
   max-width: 345px;
@@ -125,14 +125,14 @@ ______________________ */
   border-radius: 24px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s; }
-  .btn--green:hover, .btn--inactive:hover, .btn--purple:hover, .btn--help:hover {
+  .btn--default:hover, .btn--inactive:hover, .btn--primary:hover, .btn--help:hover {
     cursor: pointer;
     -webkit-transition: all 0.5s;
     transition: all 0.5s; }
 
-.btn--green {
+.btn--default {
   background: #1ea98f; }
-  .btn--green:hover {
+  .btn--default:hover {
     background: #1a937d; }
 
 .btn--inactive {
@@ -140,9 +140,9 @@ ______________________ */
   .btn--inactive:hover {
     cursor: not-allowed; }
 
-.btn--purple {
+.btn--primary {
   background: #3d2566; }
-  .btn--purple:hover {
+  .btn--primary:hover {
     background: #321e53; }
 
 .btn--help {

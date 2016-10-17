@@ -20,11 +20,11 @@ ______________________ */
   }
 }
 
-.btn--green {
+.btn--default {
   @extend %btn;
-  background: $btn--primary;
+  background: $btn--default;
   &:hover {
-    background: darken($btn--primary, 5%);
+    background: darken($btn--default, 5%);
   }
 }
 
@@ -36,11 +36,11 @@ ______________________ */
   }
 }
 
-.btn--purple {
+.btn--primary {
   @extend %btn;
-  background: $btn--secondary;
+  background: $btn--primary;
   &:hover {
-    background: darken($btn--secondary, 5%);
+    background: darken($btn--primary, 5%);
   }
 }
 
