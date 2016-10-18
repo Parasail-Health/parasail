@@ -48,7 +48,7 @@ ______________________ */
   }
 }
 
-@mixin placeholder-text($placeholder: $text--placeholder) {
+@mixin placeholder-text($placeholder: $input__placeholder) {
   ::-webkit-input-placeholder {
     color: $placeholder;
   }

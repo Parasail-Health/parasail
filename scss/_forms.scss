@@ -4,27 +4,27 @@ ______________________ */
 
 %inputStyle {
   font-family: $font--primary;
-  background: #fff;
+  background: $input--background;
   border: 1px solid $input--border;
   border-radius: 0;
 }
 
 %checkedRadioBtn {
-  background: $input--background-radio;
-  color: #fff;
+  background: $input--radio-background;
+  color: $input--radio-text;
   @include transition;
 }
 
 .form__label {
   display: block;
-  font-size: 16px;
+  font-size: $font--label;
   margin-bottom: 5px;
   color: $label--color;
 }
 
 .form__input {
   @extend %inputStyle;
-  font-size: 18px;
+  font-size: $font--input;
   margin-bottom: 15px;
   padding: 10px 16px;
   -webkit-appearance: none;
@@ -39,7 +39,7 @@ ______________________ */
 
 // Replaces the ugly default dropdown arrow
 select.form__input {
-  background-image: linear-gradient(45deg,transparent 50%,#3d2566 50%),linear-gradient(135deg,#3d2566 50%,transparent 50%);
+  background-image: linear-gradient(45deg,transparent 50%, $input__text 50%),linear-gradient(135deg, $input__text 50%,transparent 50%);
   background-position: calc(100% - 20px) calc(1em + 2px),calc(100% - 15px) calc(1em + 2px);
   background-size: 5px 5px;
   background-repeat: no-repeat;
@@ -78,6 +78,7 @@ select:-moz-focusring {
   input[type=radio]:checked + label {
     @extend %checkedRadioBtn;
   }
+  &:focus,
   &:hover {
     cursor: pointer;
     label {
