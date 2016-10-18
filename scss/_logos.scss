@@ -3,7 +3,7 @@ ______________________ */
 
 
 .logo {
-  @include logo($height: 85px);
+  @include logo;
 }
 
 .logo--md {
