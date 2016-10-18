@@ -30,7 +30,7 @@ ______________________ */
   }
 }
 
-@mixin logo($url: $logo--parasail, $width: 222px, $height: 27px ) {
+@mixin logo($url: $logo, $width: 222px, $height: 27px ) {
   display: block;
   width: $width;
   height: $height;

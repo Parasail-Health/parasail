@@ -766,12 +766,12 @@ ______________________ */
 
 /*   LOGOS
 ______________________ */
-.logo--parasail {
+.logo {
   display: block;
   width: 222px;
   height: 85px;
   text-indent: -9999px; }
-  .logo--parasail:before {
+  .logo:before {
     float: left;
     display: block;
     width: 222px;
@@ -782,12 +782,12 @@ ______________________ */
     background-repeat: no-repeat;
     text-indent: 0; }
 
-.logo--parasail-md {
+.logo--md {
   display: block;
   width: 148px;
   height: 59px;
   text-indent: -9999px; }
-  .logo--parasail-md:before {
+  .logo--md:before {
     float: left;
     display: block;
     width: 148px;
@@ -798,66 +798,18 @@ ______________________ */
     background-repeat: no-repeat;
     text-indent: 0; }
 
-.logo--parasail-xs {
+.logo--xs {
   display: block;
   width: 100px;
   height: 40px;
   text-indent: -9999px; }
-  .logo--parasail-xs:before {
+  .logo--xs:before {
     float: left;
     display: block;
     width: 100px;
     height: 40px;
     content: '';
     background: url("../img/logo_parasail.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    text-indent: 0; }
-
-.logo--avant {
-  display: block;
-  width: 177px;
-  height: 27px;
-  text-indent: -9999px; }
-  .logo--avant:before {
-    float: left;
-    display: block;
-    width: 177px;
-    height: 27px;
-    content: '';
-    background: url("../img/logo_avant.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    text-indent: 0; }
-
-.logo--pave {
-  display: block;
-  width: 94px;
-  height: 27px;
-  text-indent: -9999px; }
-  .logo--pave:before {
-    float: left;
-    display: block;
-    width: 94px;
-    height: 27px;
-    content: '';
-    background: url("../img/logo_pave.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    text-indent: 0; }
-
-.logo--prosper {
-  display: block;
-  width: 155px;
-  height: 27px;
-  text-indent: -9999px; }
-  .logo--prosper:before {
-    float: left;
-    display: block;
-    width: 155px;
-    height: 27px;
-    content: '';
-    background: url("../img/logo_prosper.png");
     background-size: 100% auto;
     background-repeat: no-repeat;
     text-indent: 0; }

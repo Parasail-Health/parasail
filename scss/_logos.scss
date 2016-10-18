@@ -2,26 +2,14 @@
 ______________________ */
 
 
-.logo--parasail {
+.logo {
   @include logo($height: 85px);
 }
 
-.logo--parasail-md {
+.logo--md {
   @include logo($width: 148px, $height: 59px);
 }
 
-.logo--parasail-xs {
+.logo--xs {
   @include logo($width: 100px, $height: 40px);
-}
-
-.logo--avant {
-  @include logo($logo--avant, 177px);
-}
-
-.logo--pave {
-  @include logo($logo--pave, 94px);
-}
-
-.logo--prosper {
-  @include logo($logo--prosper, 155px);
 }
