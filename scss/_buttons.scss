@@ -7,7 +7,7 @@ ______________________ */
   width: 100%;
   max-width: 345px;
   font-family: $font--secondary;
-  font-size: 18px;
+  font-size: $font--btn;
   text-align: center;
   margin: 0 auto;
   padding: 11px 16px;
@@ -28,11 +28,12 @@ ______________________ */
   }
 }
 
-.btn--inactive {
+.btn--error {
   @extend %btn;
-  background: $btn--inactive;
+  background: $btn--error;
+  border: 2px solid darken($btn--error, 10%);
   &:hover {
-    cursor: not-allowed;
+    background: darken($btn--error, 10%);
   }
 }
 
@@ -44,11 +45,10 @@ ______________________ */
   }
 }
 
-.btn--help {
+.btn--secondary {
   @extend %btn;
-  background: $btn--help;
-  border: 2px solid darken($btn--help, 10%);
+  background: $btn--secondary;
   &:hover {
-    background: darken($btn--help, 10%);
+    background: darken($btn--secondary, 5%);
   }
 }

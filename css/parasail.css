@@ -4,69 +4,7 @@ Description:
 Author: Parasail Health
 Author URI: https://www.parasail.com/
 */
-/*   COLORS
-______________________ */
 @import url(../fonts/fonts.css);
-.bg--blue {
-  background: #15c3ff; }
-
-.bg--green {
-  background: #1ea98f; }
-
-.bg--green-light {
-  background: #93d7ca; }
-
-.bg--grey {
-  background: #808184; }
-
-.bg--grey-dark {
-  background: #404041; }
-
-.bg--grey-light {
-  background: #b0b0b0; }
-
-.bg--purple {
-  background: #3d2566; }
-
-.bg--red {
-  background: #ef4539; }
-
-.bg--yellow {
-  background: #f7edc6; }
-
-.bg--yellow-dark {
-  background: #eebd30; }
-
-.text--blue {
-  color: #15c3ff; }
-
-.text--green {
-  color: #1ea98f; }
-
-.text--green-light {
-  color: #93d7ca; }
-
-.text--grey {
-  color: #808184; }
-
-.text--grey-dark {
-  color: #404041; }
-
-.text--grey-light {
-  color: #b0b0b0; }
-
-.text--purple {
-  color: #3d2566; }
-
-.text--red {
-  color: #ef4539; }
-
-.text--yellow {
-  color: #f7edc6; }
-
-.text--yellow-dark {
-  color: #eebd30; }
-
 /*   VARIABLES
 ______________________ */
 /*   MIXINS
@@ -112,7 +50,7 @@ table {
 
 /*   BUTTONS
 ______________________ */
-.btn--default, .btn--inactive, .btn--primary, .btn--help {
+.btn--default, .btn--error, .btn--primary, .btn--secondary {
   display: block;
   width: 100%;
   max-width: 345px;
@@ -125,31 +63,31 @@ ______________________ */
   border-radius: 24px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s; }
-  .btn--default:hover, .btn--inactive:hover, .btn--primary:hover, .btn--help:hover {
+  .btn--default:hover, .btn--error:hover, .btn--primary:hover, .btn--secondary:hover {
     cursor: pointer;
     -webkit-transition: all 0.5s;
     transition: all 0.5s; }
 
 .btn--default {
-  background: #1ea98f; }
-  .btn--default:hover {
-    background: #1a937d; }
-
-.btn--inactive {
-  background: #93d7ca; }
-  .btn--inactive:hover {
-    cursor: not-allowed; }
-
-.btn--primary {
   background: #3d2566; }
-  .btn--primary:hover {
+  .btn--default:hover {
     background: #321e53; }
 
-.btn--help {
+.btn--error {
   background: #ef4539;
   border: 2px solid #e32012; }
-  .btn--help:hover {
+  .btn--error:hover {
     background: #e32012; }
+
+.btn--primary {
+  background: #1ea98f; }
+  .btn--primary:hover {
+    background: #1a937d; }
+
+.btn--secondary {
+  background: #93d7ca; }
+  .btn--secondary:hover {
+    background: #80d0c1; }
 
 /*   FORMS
 ______________________ */
@@ -159,7 +97,7 @@ ______________________ */
   border: 1px solid #ebe9f0;
   border-radius: 0; }
 
-.form__radio-btn input[type=radio]:checked + label, .form__radio-btn:hover label {
+.form__radio-btn input[type=radio]:checked + label, .form__radio-btn:focus label, .form__radio-btn:hover label {
   background: #1ea98f;
   color: #fff;
   -webkit-transition: all 0.5s;
@@ -212,9 +150,9 @@ select:-moz-focusring {
     width: 100%;
     opacity: 0;
     -webkit-appearance: none; }
-  .form__radio-btn:hover {
+  .form__radio-btn:focus, .form__radio-btn:hover {
     cursor: pointer; }
-    .form__radio-btn:hover input {
+    .form__radio-btn:focus input, .form__radio-btn:hover input {
       cursor: pointer; }
 
 /*   GRID
@@ -635,7 +573,7 @@ ______________________ */
     margin-left: 100%; } }
 /*   FLEXBOX MAGIC
 ______________________ */
-.form__radio-btn label, .grid, [class*="grid__col-"], .icon__arrow, .icon__question-mark {
+.form__radio-btn label, .grid, [class*="grid__col-"], .icon__arrow:before, .icon__question-mark:before {
   display: inline-block;
   display: flex; }
 
@@ -707,43 +645,51 @@ ______________________ */
 
 /*   ICONS
 ______________________ */
-.icon__arrow, .icon__question-mark {
+.icon__arrow:before, .icon__question-mark:before {
   justify-content: center;
   align-items: center; }
 
 .icon__arrow {
-  width: 40px;
-  height: 40px;
-  font-family: Arial;
-  font-size: 28px;
-  font-weight: 100;
-  line-height: 1;
-  background: #1ea98f;
-  color: #fff;
-  border-radius: 26px;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
-  .icon__arrow:hover {
+  display: inline-block; }
+  .icon__arrow:before {
+    width: 40px;
+    height: 40px;
+    content: '\002794';
+    font-family: Arial;
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 1;
+    background: #1ea98f;
+    color: #fff;
+    border-radius: 26px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s; }
+  .icon__arrow:hover:before {
     cursor: pointer;
     background: #1a937d;
     -webkit-transition: all 0.5s;
     transition: all 0.5s; }
 
-.icon__close {
+.icon__close:before {
+  content: '\00d7';
   font-size: 28px;
   font-weight: 600;
   color: #808184; }
 
 .icon__question-mark {
-  width: 27px;
-  height: 27px;
-  font-family: "Akkurat Pro";
-  color: #ccc;
-  border: 2px solid #ccc;
-  border-radius: 15px; }
+  display: inline-block; }
+  .icon__question-mark:before {
+    width: 27px;
+    height: 27px;
+    content: '?';
+    font-family: "Akkurat Pro";
+    font-size: 18px;
+    color: #ccc;
+    border: 2px solid #ccc;
+    border-radius: 15px; }
 
 /*   IMG
 ______________________ */
@@ -766,12 +712,12 @@ ______________________ */
 
 /*   LOGOS
 ______________________ */
-.logo--parasail {
+.logo {
   display: block;
   width: 222px;
   height: 85px;
   text-indent: -9999px; }
-  .logo--parasail:before {
+  .logo:before {
     float: left;
     display: block;
     width: 222px;
@@ -782,12 +728,12 @@ ______________________ */
     background-repeat: no-repeat;
     text-indent: 0; }
 
-.logo--parasail-md {
+.logo--md {
   display: block;
   width: 148px;
   height: 59px;
   text-indent: -9999px; }
-  .logo--parasail-md:before {
+  .logo--md:before {
     float: left;
     display: block;
     width: 148px;
@@ -798,66 +744,18 @@ ______________________ */
     background-repeat: no-repeat;
     text-indent: 0; }
 
-.logo--parasail-xs {
+.logo--xs {
   display: block;
   width: 100px;
   height: 40px;
   text-indent: -9999px; }
-  .logo--parasail-xs:before {
+  .logo--xs:before {
     float: left;
     display: block;
     width: 100px;
     height: 40px;
     content: '';
     background: url("../img/logo_parasail.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    text-indent: 0; }
-
-.logo--avant {
-  display: block;
-  width: 177px;
-  height: 27px;
-  text-indent: -9999px; }
-  .logo--avant:before {
-    float: left;
-    display: block;
-    width: 177px;
-    height: 27px;
-    content: '';
-    background: url("../img/logo_avant.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    text-indent: 0; }
-
-.logo--pave {
-  display: block;
-  width: 94px;
-  height: 27px;
-  text-indent: -9999px; }
-  .logo--pave:before {
-    float: left;
-    display: block;
-    width: 94px;
-    height: 27px;
-    content: '';
-    background: url("../img/logo_pave.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    text-indent: 0; }
-
-.logo--prosper {
-  display: block;
-  width: 155px;
-  height: 27px;
-  text-indent: -9999px; }
-  .logo--prosper:before {
-    float: left;
-    display: block;
-    width: 155px;
-    height: 27px;
-    content: '';
-    background: url("../img/logo_prosper.png");
     background-size: 100% auto;
     background-repeat: no-repeat;
     text-indent: 0; }

@@ -15,28 +15,38 @@ $screen-md-max: ($screen-lg-min - 1);
 
 // ----- Colors ------ 
 
+// Brand Colors
+$brand-color: #3d2566;
+$accent-color: #1ea98f;
+$brand-text: #808184;
+
 // Buttons
-$btn--default: $parasail-green;
-$btn--primary: $parasail-purple;
-$btn--inactive: $parasail-green-light;
-$btn--help: $parasail-red;
+$btn--default: $brand-color;
+$btn--error: #ef4539;
+$btn--primary: $accent-color;
+$btn--secondary: #93d7ca;
 $btn__text: #fff;
 
 // Forms
-$label--color: $parasail-grey;
-$input__text: $parasail-purple;
-$input__placeholder: $parasail-grey;
 $input--background: #fff;
-$input--background-radio: $parasail-green;
+$input__text: $brand-color;
+$input__placeholder: $brand-text;
+$input--radio-background: $accent-color;
+$input--radio-text: #fff;
 $input--border: #ebe9f0;
-$input--border-active: $parasail-purple;
+$input--border-active: $brand-color;
+$label--color: $brand-text;
 
 // Text
-$text--regular: $parasail-grey;
-$text--highlighted: $parasail-purple;
-$text--link: $parasail-green;
-$text--placeholder: $parasail-grey-dark; 
-$text--footer: $parasail-grey-dark;
+$text--regular: $brand-text;
+$text--highlighted: $brand-color;
+$text--link: $accent-color;
+
+// Icons
+$icon__arrow-background: $accent-color;
+$icon__arrow-text: #fff;
+$icon__close-text: $text--regular;
+$icon__question-mark-text: #ccc;
 
 
 
@@ -45,11 +55,28 @@ $text--footer: $parasail-grey-dark;
 $font--primary: 'Akkurat Light Pro';
 $font--secondary: 'Akkurat Pro';
 
+// If you would like to use only one font,
+// uncomment the line below
+// $font--secondary: $font--primary;
 
 
-// ------ Logos ------ 
 
-$logo--parasail: url('../img/logo_parasail.png');
-$logo--avant: url('../img/logo_avant.png');
-$logo--pave: url('../img/logo_pave.png');
-$logo--prosper: url('../img/logo_prosper.png');
+// ---- Font Size ---- 
+
+// Buttons
+$font--btn: 18px;
+
+// Forms
+$font--input: 18px;
+$font--label: 16px;
+
+// Icons
+$icon__arrow: 28px;
+$icon__close: 28px;
+$icon__question-mark: 18px;
+
+
+
+// ------ Logo ------ 
+
+$logo: url('../img/logo_parasail.png');

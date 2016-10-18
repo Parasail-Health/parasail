@@ -30,7 +30,7 @@ ______________________ */
   }
 }
 
-@mixin logo($url: $logo--parasail, $width: 222px, $height: 27px ) {
+@mixin logo($url: $logo, $width: 222px, $height: 85px ) {
   display: block;
   width: $width;
   height: $height;
@@ -48,7 +48,7 @@ ______________________ */
   }
 }
 
-@mixin placeholder-text($placeholder: $text--placeholder) {
+@mixin placeholder-text($placeholder: $input__placeholder) {
   ::-webkit-input-placeholder {
     color: $placeholder;
   }
