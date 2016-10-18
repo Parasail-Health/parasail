@@ -28,11 +28,12 @@ ______________________ */
   }
 }
 
-.btn--inactive {
+.btn--error {
   @extend %btn;
-  background: $btn--inactive;
+  background: $btn--error;
+  border: 2px solid darken($btn--error, 10%);
   &:hover {
-    cursor: not-allowed;
+    background: darken($btn--error, 10%);
   }
 }
 
@@ -44,11 +45,10 @@ ______________________ */
   }
 }
 
-.btn--help {
+.btn--secondary {
   @extend %btn;
-  background: $btn--help;
-  border: 2px solid darken($btn--help, 10%);
+  background: $btn--secondary;
   &:hover {
-    background: darken($btn--help, 10%);
+    background: darken($btn--secondary, 5%);
   }
 }

@@ -112,7 +112,7 @@ table {
 
 /*   BUTTONS
 ______________________ */
-.btn--default, .btn--inactive, .btn--primary, .btn--help {
+.btn--default, .btn--error, .btn--primary, .btn--secondary {
   display: block;
   width: 100%;
   max-width: 345px;
@@ -125,31 +125,31 @@ ______________________ */
   border-radius: 24px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s; }
-  .btn--default:hover, .btn--inactive:hover, .btn--primary:hover, .btn--help:hover {
+  .btn--default:hover, .btn--error:hover, .btn--primary:hover, .btn--secondary:hover {
     cursor: pointer;
     -webkit-transition: all 0.5s;
     transition: all 0.5s; }
 
 .btn--default {
-  background: #1ea98f; }
-  .btn--default:hover {
-    background: #1a937d; }
-
-.btn--inactive {
-  background: #93d7ca; }
-  .btn--inactive:hover {
-    cursor: not-allowed; }
-
-.btn--primary {
   background: #3d2566; }
-  .btn--primary:hover {
+  .btn--default:hover {
     background: #321e53; }
 
-.btn--help {
+.btn--error {
   background: #ef4539;
   border: 2px solid #e32012; }
-  .btn--help:hover {
+  .btn--error:hover {
     background: #e32012; }
+
+.btn--primary {
+  background: #1ea98f; }
+  .btn--primary:hover {
+    background: #1a937d; }
+
+.btn--secondary {
+  background: #93d7ca; }
+  .btn--secondary:hover {
+    background: #80d0c1; }
 
 /*   FORMS
 ______________________ */
