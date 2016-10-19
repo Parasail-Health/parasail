@@ -1,7 +1,7 @@
 {
-  "name": "ph-css",
-  "version": "1.0.2",
-  "description": "Parasail Health - CSS Library",
+  "name": "parasail",
+  "version": "1.0.0",
+  "description": "A micro CSS framework https://parasail-health.github.io/parasail/",
   "main": "css/parasail.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,14 +11,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Parasail-Health/ph-css.git"
+    "url": "git+https://github.com/Parasail-Health/parasail.git"
   },
+  "keywords": [
+    "parasail",
+    "css",
+    "framework",
+    "flexbox",
+    "sass"
+  ],
   "author": "Parasail Health",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Parasail-Health/ph-css/issues"
+    "url": "https://github.com/Parasail-Health/parasail/issues"
   },
-  "homepage": "https://github.com/Parasail-Health/ph-css#readme",
+  "homepage": "https://github.com/Parasail-Health/parasail#readme",
   "dependencies": {
     "clean-css": "^3.4.20"
   },

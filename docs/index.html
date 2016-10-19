@@ -18,8 +18,8 @@
 			<h1 class="grid__col-sm-9 grid__col-xs-6">
 				<a class="logo--md" href="https://www.parasail.com/" target="_blank">Parasail</a>
 			</h1>
-			<nav class="grid__col-sm-2 grid__col-xs-6">
-				<dl class="menu">
+			<nav class="grid__col-sm-2 grid__col-xs-6 nav">
+				<dl class="nav__menu">
 					<dt>Menu</dt>
 					<dd>
 						<a href="#introduction"><span>01</span> Introduction</a>
@@ -125,7 +125,7 @@
 		</section>
 		<section id="introduction" class="introduction">
 			<h2 class="text--center">01 - Introduction</h2>
-			<p>Parasail is a minimalistic CSS framework from <a href="https://www.parasail.com/" target="_blank">Parasail Health</a> using SASS and Flexbox. It's main feature is a Flexbox based grid system which lets you define column widths based on the viewport.</p>
+			<p>Parasail is a minimalistic CSS framework from <a href="https://www.parasail.com/" target="_blank">Parasail Health</a> using SASS and Flexbox. It's main feature is a Flexbox based grid system which lets you create responsive layouts easily.</p>
 		</section>
 		<section id="getting-started" class="getting-started">
 			<h2 class="text--center">02 - Getting Started</h2>
@@ -143,30 +143,30 @@
 
 			<div class="subsection">
 				<h3>Usage</h3>
-				<p>You can include the file <code>parasail.css</code> in your header:</p>
-				<div class="example-code">
-					<code class="code-white"><</code>
-					<code class="code-pink">link </code>
-					<code class="code-green">rel</code>
-					<code class="code-white">=</code>
-					<code class="code-yellow">"stylesheet" </code>
-					<code class="code-green">href</code>
-					<code class="code-white">=</code>
-					<code class="code-yellow">"path/to/node_modules/parasail/css/parasail.min.css"</code>
-					<code class="code-white">></code>
+				<p>You can include the file <code>parasail.min.css</code> in your header:</p>
+				<div class="example__code">
+					<code class="code--white"><</code>
+					<code class="code--pink">link </code>
+					<code class="code--green">rel</code>
+					<code class="code--white">=</code>
+					<code class="code--yellow">"stylesheet" </code>
+					<code class="code--green">href</code>
+					<code class="code--white">=</code>
+					<code class="code--yellow">"path/to/node_modules/parasail/css/parasail.min.css"</code>
+					<code class="code--white">></code>
 				</div>
 
 				<p>Or you can import the <code>parasail.scss</code> file in your own scss file if you want to use our variables:</p>
-				<div class="example-code">
-					<code class="code-pink">@import </code>
-					<code class="code-yellow">'path/to/node_modules/parasail/scss/parasail.scss'</code>
-					<code class="code-white">;</code>
+				<div class="example__code">
+					<code class="code--pink">@import </code>
+					<code class="code--yellow">'path/to/node_modules/parasail/scss/parasail.scss'</code>
+					<code class="code--white">;</code>
 				</div>
 			</div>
 
 			<div class="subsection">
 				<h3>Create your own theme</h3>
-				<p>We included a file called <code>_variables.scss</code> in the <code>scss</code> folder which by default loads our Parasail styles. By editing this file you can easily create your own theme in just a few minutes.</p>
+				<p>We included a file called <code>_variables.scss</code> in the <code>scss</code> folder which by default loads our Parasail styles. By editing this file you can create your own theme in just a few minutes.</p>
 			</div>
 		</section>
 		<section id="bem" class="bem">
@@ -175,54 +175,54 @@
 			<p>BEM is successful not because it gives you a lot of options but because it limits what you are allowed to do. The problem it's trying to avoid is getting your rules to match the elements you want, without them accidentally matching the elements you don’t want to affect.</p>
 			<ul class="bem__explanation-list">
 				<li><code>Block</code> is a top-level abstraction of a new component.</li>
-				<div class="example-code">
-					<code class="code-white"><</code>
-					<code class="code-pink">button </code>
-					<code class="code-green">class</code>
-					<code class="code-white">=</code>
-					<code class="code-yellow">"btn"</code>
-					<code class="code-white">></code>
-					<code class="code-white">Block</code>
-					<code class="code-white">&lt;/</code>
-					<code class="code-pink">button</code>
-					<code class="code-white">></code>
+				<div class="example__code">
+					<code class="code--white"><</code>
+					<code class="code--pink">button </code>
+					<code class="code--green">class</code>
+					<code class="code--white">=</code>
+					<code class="code--yellow">"btn"</code>
+					<code class="code--white">></code>
+					<code class="code--white">Block</code>
+					<code class="code--white">&lt;/</code>
+					<code class="code--pink">button</code>
+					<code class="code--white">></code>
 				</div>
 				<li><code>Element</code> depends upon the block.</li>
-				<div class="example-code">
-					<code class="code-white"><</code>
-					<code class="code-pink">button </code>
-					<code class="code-green">class</code>
-					<code class="code-white">=</code>
-					<code class="code-yellow">"btn"</code>
-					<code class="code-white">></code>
+				<div class="example__code">
+					<code class="code--white"><</code>
+					<code class="code--pink">button </code>
+					<code class="code--green">class</code>
+					<code class="code--white">=</code>
+					<code class="code--yellow">"btn"</code>
+					<code class="code--white">></code>
 					<br>
-						<code class="code-white" style="padding-left: 50px;"><</code>
-						<code class="code-pink">p </code>
-						<code class="code-green">class</code>
-						<code class="code-white">=</code>
-						<code class="code-yellow">"btn__text"</code>
-						<code class="code-white">></code>
-						<code class="code-white">Element</code>
-						<code class="code-white">&lt;/</code>
-						<code class="code-pink">p</code>
-						<code class="code-white">></code>
+						<code class="code--white" style="padding-left: 50px;"><</code>
+						<code class="code--pink">p </code>
+						<code class="code--green">class</code>
+						<code class="code--white">=</code>
+						<code class="code--yellow">"btn__text"</code>
+						<code class="code--white">></code>
+						<code class="code--white">Element</code>
+						<code class="code--white">&lt;/</code>
+						<code class="code--pink">p</code>
+						<code class="code--white">></code>
 					<br>
-					<code class="code-white">&lt;/</code>
-					<code class="code-pink">button</code>
-					<code class="code-white">></code>
+					<code class="code--white">&lt;/</code>
+					<code class="code--pink">button</code>
+					<code class="code--white">></code>
 				</div>
 				<li><code>Modifier</code> changes the style of the block.</li>
-				<div class="example-code">
-					<code class="code-white"><</code>
-					<code class="code-pink">button </code>
-					<code class="code-green">class</code>
-					<code class="code-white">=</code>
-					<code class="code-yellow">"btn--green"</code>
-					<code class="code-white">></code>
-					<code class="code-white">Modifier</code>
-					<code class="code-white">&lt;/</code>
-					<code class="code-pink">button</code>
-					<code class="code-white">></code>
+				<div class="example__code">
+					<code class="code--white"><</code>
+					<code class="code--pink">button </code>
+					<code class="code--green">class</code>
+					<code class="code--white">=</code>
+					<code class="code--yellow">"btn--green"</code>
+					<code class="code--white">></code>
+					<code class="code--white">Modifier</code>
+					<code class="code--white">&lt;/</code>
+					<code class="code--pink">button</code>
+					<code class="code--white">></code>
 				</div>
 			</ul>
 		</section>
@@ -256,7 +256,7 @@
 					<p>Different column sizes can be defined by using <code>.grid__col-1</code> to <code>.grid__col-12</code>, with <code>.grid__col-1</code> being the smallest column size and <code>.grid__col-12</code> taking up 100% of its parent container.</p>
 					<p><code>.grid__col-auto</code> creates a column that will take up however much space is left in the row.</p>
 					<ul class="grid direction-column example">
-						<li class="grid__col-1">.grid__col-1</li>
+						<li class="grid__col-1">.grid__ col-1</li>
 						<li class="grid__col-2">.grid__col-2</li>
 						<li class="grid__col-3">.grid__col-3</li>
 						<li class="grid__col-4">.grid__col-4</li>
@@ -278,9 +278,16 @@
 			</div>
 
 			<div class="subsection">
-				<h3>Responsive Layout</h3>
+				<h3>Responsive Layouts</h3>
 				<article class="responsive-layout">
-					<p>It is possible to define different column widths for each viewport by specifying the viewport width in the column class: <code>.grid__col-xs-(1-12)</code>, <code>.grid__col-sm-(1-12)</code>, <code>.grid__col-md-(1-12)</code> or <code>.grid__col-lg-(1-12)</code>.</p>
+					<p>The grid system lets you create responsive layouts easily by giving you the option to define different column widths for each viewport. The viewports are determined by 4 different breakpoints:</p>
+					<ul class="unordered-list responsive-layout__list" style="margin-bottom: 50px;">
+						<li>Large: Minimum Width 1200px</li>
+						<li>Medium: Minimum Width 992px</li>
+						<li>Small: Minimum Width 768px</li>
+						<li>Extra Small: Maximum Width 767px</li>
+					</ul>
+					<p>Using elements with the class <code>.grid__col-lg-</code> defines column widths for the large viewport (min-width: 1200px). <code>.grid-col-md-</code> will affect viewports with a min-width of 992px. Elements with the class <code>.grid__col-sm-</code> will affect the small viewport (min-width: 768px) and <code>.grid__col-xs-</code> defines columns width for the extra small viewport (max-width: 767px).</p>
 					<iframe src="demo-layout.html" class="demo-layout"></iframe>
 				</article>
 			</div>
@@ -422,7 +429,7 @@
 						<li class="grid__col-3">.grid__col-3</li>
 						<li class="grid__col-4">
 							.grid__col-4<br>
-							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+							Hodor. Hodor HODOR hodor, Hodor; hodor hodor... <br>
 							(more text)
 						</li>
 						<li class="grid__col-5">.grid__col-5</li>
@@ -435,7 +442,7 @@
 						<li class="grid__col-3">.grid__col-3</li>
 						<li class="grid__col-4">
 							.grid__col-4<br>
-							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+							Hodor. Hodor HODOR hodor, Hodor; hodor hodor... <br>
 							(more text)
 						</li>
 						<li class="grid__col-5">.grid__col-5</li>
@@ -448,7 +455,7 @@
 						<li class="grid__col-3">.grid__col-3</li>
 						<li class="grid__col-4">
 							.grid__col-4<br>
-							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+							Hodor. Hodor HODOR hodor, Hodor; hodor hodor... <br>
 							(more text)
 						</li>
 						<li class="grid__col-5">.grid__col-5</li>
@@ -461,7 +468,7 @@
 						<li class="grid__col-3">.grid__col-3</li>
 						<li class="grid__col-4">
 							.grid__col-4<br>
-							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+							Hodor. Hodor HODOR hodor, Hodor; hodor hodor... <br>
 							(more text)
 						</li>
 						<li class="grid__col-5">.grid__col-5</li>
@@ -474,7 +481,7 @@
 						<li class="grid__col-3">.grid__col-3</li>
 						<li class="grid__col-4" style="line-height: 2; padding-top: 20px;">
 							.grid__col-4<br>
-							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+							Hodor. Hodor HODOR hodor, Hodor; hodor hodor... <br>
 							(more text)
 						</li>
 						<li class="grid__col-5">.grid__col-5</li>
@@ -489,70 +496,65 @@
 					<h4>.align-self-stretch</h4>
 					<p>Default value, it stretches the height of the flex item to fit the container (still respects min-width/max-width)</p>
 					<ul class="grid align-start example">
-						<li class="grid__col-3 align-self-stretch">.grid--align-self-stretch</li>
-						<li class="grid__col-3">
-							.grid__col-3<br>
-							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+						<li class="grid__col-4 align-self-stretch">.grid--align-self-stretch</li>
+						<li class="grid__col-4">
+							.grid__col-4<br>
+							Hodor. Hodor HODOR hodor, Hodor; hodor hodor... <br>
 							(more text)
 						</li>
-						<li class="grid__col-3">.grid__col-3</li>
-						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-4">.grid__col-4</li>
 					</ul>
 				</article>
 				<article>
 					<h4>.align-self-start</h4>
 					<p>Flex item gets positioned at the top of the container.</p>
 					<ul class="grid align-start example">
-						<li class="grid__col-3 align-self-start">.grid--align-self-start</li>
-						<li class="grid__col-3">
-							.grid__col-3<br>
-							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+						<li class="grid__col-4 align-self-start">.grid--align-self-start</li>
+						<li class="grid__col-4">
+							.grid__col-4<br>
+							Hodor. Hodor HODOR hodor, Hodor; hodor hodor... <br>
 							(more text)
 						</li>
-						<li class="grid__col-3">.grid__col-3</li>
-						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-4">.grid__col-4</li>
 					</ul>
 				</article>
 				<article>
 					<h4>.align-self-end</h4>
 					<p>Flex item gets positioned at the bottom of the container.</p>
 					<ul class="grid align-start example">
-						<li class="grid__col-3 align-self-end">.grid--align-self-end</li>
-						<li class="grid__col-3">
-							.grid__col-3<br>
-							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+						<li class="grid__col-4 align-self-end">.grid--align-self-end</li>
+						<li class="grid__col-4">
+							.grid__col-4<br>
+							Hodor. Hodor HODOR hodor, Hodor; hodor hodor... <br>
 							(more text)
 						</li>
-						<li class="grid__col-3">.grid__col-3</li>
-						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-4">.grid__col-4</li>
 					</ul>
 				</article>
 				<article>
 					<h4>.align-self-center</h4>
 					<p>Flex item gets positioned at the vertical center of the container (centered in the cross-axis).</p>
 					<ul class="grid align-start example">
-						<li class="grid__col-3 align-self-center">.grid--align-self-center</li>
-						<li class="grid__col-3">
-							.grid__col-3<br>
-							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+						<li class="grid__col-4 align-self-center">.grid--align-self-center</li>
+						<li class="grid__col-4">
+							.grid__col-4<br>
+							Hodor. Hodor HODOR hodor, Hodor; hodor hodor... <br>
 							(more text)
 						</li>
-						<li class="grid__col-3">.grid__col-3</li>
-						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-4">.grid__col-4</li>
 					</ul>
 				</article>
 				<article>
 					<h4>.align-self-baseline</h4>
 					<p>Flex item gets positioned at the baseline of the container.</p>
 					<ul class="grid align-start example">
-						<li class="grid__col-3 align-self-baseline">.grid--align-self-baseline</li>
-						<li class="grid__col-3" style="line-height: 2; padding-top: 20px;">
-							.grid__col-3<br>
-							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+						<li class="grid__col-4 align-self-baseline">.grid--align-self-baseline</li>
+						<li class="grid__col-4" style="line-height: 2; padding-top: 20px;">
+							.grid__col-4<br>
+							Hodor. Hodor HODOR hodor, Hodor; hodor hodor... <br>
 							(more text)
 						</li>
-						<li class="grid__col-3" style="line-height: 2; padding-top: 20px;">.grid__col-3</li>
-						<li class="grid__col-3" style="line-height: 2; padding-top: 20px;">.grid__col-3</li>
+						<li class="grid__col-4" style="line-height: 2; padding-top: 20px;">.grid__col-4</li>
 					</ul>
 				</article>
 			</div>
@@ -579,52 +581,52 @@
 				<h3>Radio Buttons</h3>
 				<h4>.form__radio-btn</h4>
 				<p>Input fields with type="radio" don't allow you to set a placeholder. To add a placeholder to a radio button, you need to add a label and make the label the actual placeholder. In order to still make it look like a button, wrap the label as well as the input in a div with the class="form__radio-btn".</p>
-				<div class="example-code">
-					<code class="code-white"><</code>
-					<code class="code-pink">div </code>
-					<code class="code-green">class</code>
-					<code class="code-white">=</code>
-					<code class="code-yellow">"form__radio-btn"</code>
-					<code class="code-white">></code>
+				<div class="example__code">
+					<code class="code--white"><</code>
+					<code class="code--pink">div </code>
+					<code class="code--green">class</code>
+					<code class="code--white">=</code>
+					<code class="code--yellow">"form__radio-btn"</code>
+					<code class="code--white">></code>
 					<br>
-						<code class="code-white" style="padding-left: 50px"><</code>
-						<code class="code-pink">input </code>
-						<code class="code-green">id</code>
-						<code class="code-white">=</code>
-						<code class="code-yellow">"id"</code>
-						<code class="code-green">name</code>
-						<code class="code-white">=</code>
-						<code class="code-yellow">"name"</code>
-						<code class="code-green">type</code>
-						<code class="code-white">=</code>
-						<code class="code-yellow">"radio"</code>
-						<code class="code-white">/&gt;</code>
+						<code class="code--white" style="padding-left: 50px"><</code>
+						<code class="code--pink">input </code>
+						<code class="code--green">id</code>
+						<code class="code--white">=</code>
+						<code class="code--yellow">"id"</code>
+						<code class="code--green">name</code>
+						<code class="code--white">=</code>
+						<code class="code--yellow">"name"</code>
+						<code class="code--green">type</code>
+						<code class="code--white">=</code>
+						<code class="code--yellow">"radio"</code>
+						<code class="code--white">/&gt;</code>
 					<br>
-						<code class="code-white" style="padding-left: 50px;"><</code>
-						<code class="code-pink">label </code>
-						<code class="code-green">for</code>
-						<code class="code-white">=</code>
-						<code class="code-yellow">"id"</code>
-						<code class="code-white">></code>
-						<code class="code-white">Great 760+</code>
-						<code class="code-white">&lt;/</code>
-						<code class="code-pink">label</code>
-						<code class="code-white">></code>
+						<code class="code--white" style="padding-left: 50px;"><</code>
+						<code class="code--pink">label </code>
+						<code class="code--green">for</code>
+						<code class="code--white">=</code>
+						<code class="code--yellow">"id"</code>
+						<code class="code--white">></code>
+						<code class="code--white">Great 760+</code>
+						<code class="code--white">&lt;/</code>
+						<code class="code--pink">label</code>
+						<code class="code--white">></code>
 					<br>
-					<code class="code-white">&lt;/</code>
-					<code class="code-pink">div</code>
-					<code class="code-white">></code>
+					<code class="code--white">&lt;/</code>
+					<code class="code--pink">div</code>
+					<code class="code--white">></code>
 				</div>
 			</div>
 
 			<h3>Example:</h3>
 			<form class="grid example justify-space-between" style="padding: 50px; background: #eee;">
-				<span class="grid__col-2 code-pink">Label:</span>
-				<label for="id_first_name" class="grid__col-10 form__label">First Name</label>
-				<span class="grid__col-2 code-pink">Input:</span>
-				<input id="id_first_name" class="grid__col-10 form__input" name="first_name" type="text" value="" required="" placeholder="test">
-				<span class="grid__col-2 code-pink">Select:</span>
-				<select class="grid__col-10 form__input" id="id_income_type" name="income_type" required="">
+				<span class="grid__col-sm-2 grid__col-xs-3 code--pink">Label:</span>
+				<label for="id_first_name" class="grid__col-sm-10 grid__col-xs-12 form__label">First Name</label>
+				<span class="grid__col-sm-2 grid__col-xs-12 code--pink">Input:</span>
+				<input id="id_first_name" class="grid__col-sm-10 grid__col-xs-12 form__input" name="first_name" type="text" value="" required="" placeholder="test">
+				<span class="grid__col-sm-2 grid__col-xs-12 code--pink">Select:</span>
+				<select class="grid__col-sm-10 grid__col-xs-12 form__input" id="id_income_type" name="income_type" required="">
 					<option value="" disabled="" hidden="">Select income type</option>
 					<option value="employment">Employed (Non-Military)</option>
 					<option value="military">Employed (Military)</option>
@@ -633,16 +635,16 @@
 					<option value="unemployment">Benefits (Temporary)</option>
 					<option value="other">Other</option>
 				</select>
-				<span class="grid__col-2 code-pink">Radio:</span>
-				<div class="grid__col-3 form__radio-btn">
+				<span class="grid__col-sm-2 grid__col-xs-12 code--pink">Radio:</span>
+				<div class="grid__col-sm-3 grid__col-xs-4 form__radio-btn">
 					<input id="id_credit_score_760" name="credit_score" type="radio" required="">
 					<label for="id_credit_score_760">Great 760+</label>
 				</div>
-				<div class="grid__col-3 form__radio-btn">
+				<div class="grid__col-sm-3 grid__col-xs-4 form__radio-btn">
 					<input id="id_credit_score_700" name="credit_score" type="radio" required="">
 					<label for="id_credit_score_700">Great 700+</label>
 				</div>
-				<div class="grid__col-3 form__radio-btn">
+				<div class="grid__col-sm-3 grid__col-xs-4 form__radio-btn">
 					<input id="id_credit_score_640" name="credit_score" type="radio" required="">
 					<label for="id_credit_score_640">Great 640+</label>
 				</div>
@@ -754,55 +756,55 @@
 			<article>
 				<h4>.icon__arrow</h4>
 				<p><span class="icon__arrow"></span></p>
-				<div class="example-code">
-					<code class="code-white"><</code>
-					<code class="code-pink">span </code>
-					<code class="code-green">class</code>
-					<code class="code-white">=</code>
-					<code class="code-yellow">"icon__arrow"</code>
-					<code class="code-white">></code>
-					<code class="code-purple">&</code>
-					<code class="code-purple">#x2794</code>
-					<code class="code-purple">;</code>
-					<code class="code-white">&lt;/</code>
-					<code class="code-pink">span</code>
-					<code class="code-white">></code>
+				<div class="example__code">
+					<code class="code--white"><</code>
+					<code class="code--pink">span </code>
+					<code class="code--green">class</code>
+					<code class="code--white">=</code>
+					<code class="code--yellow">"icon__arrow"</code>
+					<code class="code--white">></code>
+					<code class="code--purple">&</code>
+					<code class="code--purple">#x2794</code>
+					<code class="code--purple">;</code>
+					<code class="code--white">&lt;/</code>
+					<code class="code--pink">span</code>
+					<code class="code--white">></code>
 				</div>
 			</article>
 
 			<article>
 				<h4>.icon__close</h4>
 				<p><span class="icon__close"></span></p>
-				<div class="example-code">
-					<code class="code-white"><</code>
-					<code class="code-pink">span </code>
-					<code class="code-green">class</code>
-					<code class="code-white">=</code>
-					<code class="code-yellow">"icon__close"</code>
-					<code class="code-white">></code>
-					<code class="code-purple">&</code>
-					<code class="code-purple">times</code>
-					<code class="code-purple">;</code>
-					<code class="code-white">&lt;/</code>
-					<code class="code-pink">span</code>
-					<code class="code-white">></code>
+				<div class="example__code">
+					<code class="code--white"><</code>
+					<code class="code--pink">span </code>
+					<code class="code--green">class</code>
+					<code class="code--white">=</code>
+					<code class="code--yellow">"icon__close"</code>
+					<code class="code--white">></code>
+					<code class="code--purple">&</code>
+					<code class="code--purple">times</code>
+					<code class="code--purple">;</code>
+					<code class="code--white">&lt;/</code>
+					<code class="code--pink">span</code>
+					<code class="code--white">></code>
 				</div>
 			</article>
 
 			<article>
 				<h4>.icon__question-mark</h4>
 				<p><span class="icon__question-mark"></span></p>
-				<div class="example-code">
-					<code class="code-white"><</code>
-					<code class="code-pink">span </code>
-					<code class="code-green">class</code>
-					<code class="code-white">=</code>
-					<code class="code-yellow">"icon__question-mark"</code>
-					<code class="code-white">></code>
-					<code class="code-purple">?</code>
-					<code class="code-white">&lt;/</code>
-					<code class="code-pink">span</code>
-					<code class="code-white">></code>
+				<div class="example__code">
+					<code class="code--white"><</code>
+					<code class="code--pink">span </code>
+					<code class="code--green">class</code>
+					<code class="code--white">=</code>
+					<code class="code--yellow">"icon__question-mark"</code>
+					<code class="code--white">></code>
+					<code class="code--purple">?</code>
+					<code class="code--white">&lt;/</code>
+					<code class="code--pink">span</code>
+					<code class="code--white">></code>
 				</div>
 			</article>
 		</section>
@@ -858,24 +860,24 @@
 					<li>Write comments for code that isn't self-documenting (for example Browser hacks)</li>
 					<li>When writing comments in SASS, keep in mind that comments using the double slash ( <code>// Double slash comment</code> ) will not be compiled to regular CSS while comments using the slash + asterix ( <code>/* Comment using slash + asterix */</code> ) will be compiled.</li>
 				</ul>
-				<div class="example-code">
+				<div class="example__code">
 					<p>
-						<code class="code-green">.grid</code>
-						<code class="code-white">,</code>
+						<code class="code--green">.grid</code>
+						<code class="code--white">,</code>
 					</p>
-					<p><code class="code-green">.grid__col-auto </code>
-						<code class="code-white">{</code>
+					<p><code class="code--green">.grid__col-auto </code>
+						<code class="code--white">{</code>
 					</p>
-						<p><code class="code-grey" style="padding-left: 50px;">// display: inline-block added for IE support</code></p>
+						<p><code class="code--grey" style="padding-left: 50px;">// display: inline-block added for IE support</code></p>
 						<p>
-							<code class="code-blue" style="padding-left: 50px;">display</code>
-							<code class="code-white">:</code>
-							<code class="code-blue">inline</code>
-							<code class="code-white">-</code>
-							<code class="code-blue">block</code>
-							<code class="code-white">;</code>
+							<code class="code--blue" style="padding-left: 50px;">display</code>
+							<code class="code--white">:</code>
+							<code class="code--blue">inline</code>
+							<code class="code--white">-</code>
+							<code class="code--blue">block</code>
+							<code class="code--white">;</code>
 						</p>
-					<p><code class="code-white">}</code></p>
+					<p><code class="code--white">}</code></p>
 				</div>
 			</div>
 		</section>

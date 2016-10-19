@@ -1,4 +1,4 @@
-@import '../../parasail.scss';
+@import '../../scss/parasail.scss';
 
 
 @mixin animation($animation: demo 5s 2s alternate infinite) {
@@ -9,7 +9,7 @@
   animation: $animation;
 }
 
-@include keyframes(demo) {
+@include keyframes(demo-lg) {
   0% {
     max-width: 1200px;
     margin-left: -600px;
@@ -19,23 +19,40 @@
     margin-left: -600px;
   }
   40% {
-    max-width: 993px;
-    margin-left: -496.5px;
+    max-width: 880px;
+    margin-left: -440px;
   }
   60% {
-    max-width: 993px;
-    margin-left: -496.5px;
+    max-width: 880px;
+    margin-left: -440px;
   }
   80% {
-    max-width: 759px;
-    margin-left: -379.5px;
+    max-width: 600px;
+    margin-left: -300px;
   }
   100% {
-    max-width: 759px;
-    margin-left: -379.5px;
+    max-width: 600px;
+    margin-left: -300px;
   }
 }
-
+@include keyframes(demo-md) {
+  0% {
+    max-width: 880px;
+    margin-left: -440px;
+  }
+  49.9% {
+    max-width: 880px;
+    margin-left: -440px;
+  }
+  50% {
+    max-width: 600px;
+    margin-left: -300px;
+  }
+  100% {
+    max-width: 600px;
+    margin-left: -300px;
+  }
+}
 
 header {
   z-index: 10;
@@ -51,7 +68,7 @@ header {
     align-items: flex-end;
   }
 }
-.menu {
+.nav__menu {
   position: absolute;
   top: -25px;
   height: 30px;
@@ -62,13 +79,13 @@ header {
     @include box-shadow(0px 10px 23px -6px #3d2665);
   }
 }
-.menu dt,
-.menu dd {
+.nav__menu dt,
+.nav__menu dd {
   padding: 5px 10px;
   background: #fff;
   color: $brand-color;
 }
-.menu dd {
+.nav__menu dd {
   a {
     color: $brand-color;
   }
@@ -80,34 +97,17 @@ header {
     }
   }
 }
+.link--github {
+  color: $brand-color;
+}
+@media only screen and (max-width: $screen-md-min) {
+  .nav {
+    align-items: flex-end;
+  }
+}
 @media only screen and (max-width: $screen-xs-max) {
   .link--github {
     display: none;
-  }
-}
-
-.hero {
-  height: 400px;
-  margin-top: 108px;
-  background: $brand-color;
-  article {
-    max-width: 245px;
-    margin: 80px auto 0;
-    color: #fff;
-    h1 {
-      font-size: 40px;
-      letter-spacing: 10px;
-      margin-bottom: 10px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #fff;
-    }
-    p {
-      font-size: 31px;
-      letter-spacing: 8px;
-      span {
-        letter-spacing: 4px;
-      }
-    }
   }
 }
 
@@ -118,30 +118,9 @@ main {
 
 section {
   padding: 50px 50px 80px;
-}
-@media only screen and (max-width: $screen-xs-max) {
-  section {
-    padding: 50px 15px 80px;
+  @media only screen and (max-width: $screen-md-min) {
+    padding: 50px 15px 30px;
   }
-}
-
-.table-of-content ol li {
-  font-size: 22px;
-  line-height: 2;
-  a {
-    color: $brand-color;
-    @include transition;
-    &:hover {
-      color: $accent-color;
-      @include transition;
-    }
-  }
-  span {
-    margin-right: 15px;
-  }
-}
-.subsection {
-  margin-bottom: 100px;
 }
 article {
   margin: 35px 0 50px;
@@ -175,58 +154,142 @@ p {
   margin-bottom: 15px;
 }
 code {
+  word-wrap: break-word;
   background: #dedede;
   padding: 2px 5px;
 }
-.responsive-layout {
-  p {
-    margin-bottom: 65px;
+
+.hero {
+  height: 400px;
+  margin-top: 108px;
+  background: $brand-color;
+  article {
+    max-width: 245px;
+    margin: 80px auto 0;
+    color: #fff;
+    h1 {
+      font-size: 40px;
+      letter-spacing: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #fff;
+    }
+    p {
+      font-size: 31px;
+      letter-spacing: 8px;
+      span {
+        letter-spacing: 4px;
+      }
+    }
   }
 }
-.demo-layout {
-  position: absolute;
-  left: 50%;
-  display: block;
-  width: 100%;
-  max-width: 1200px;
-  margin-left: -600px;
-  @include animation;
+.table-of-content ol li {
+  font-size: 22px;
+  line-height: 2;
+  a {
+    color: $brand-color;
+    @include transition;
+    &:hover {
+      color: $accent-color;
+      @include transition;
+    }
+  }
+  span {
+    margin-right: 15px;
+  }
 }
-.example-code {
+.subsection {
+  margin-bottom: 100px;
+}
+.responsive-layout {
+  height: 500px;
+  p {
+    margin-bottom: 50px;
+  }
+  @media only screen and (max-width: 1000px) {
+    height: auto;
+    margin: 30px 0 0;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .responsive-layout__list {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+  .demo-layout {
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: 100%;
+    height: 218px;
+    @media only screen and (min-width: $screen-md-min) {
+      max-width: 1200px;
+      margin-left: -600px;
+      -webkit-animation: demo-md 3s 2s alternate infinite;
+      -moz-animation: demo-md 3s 2s alternate infinite;
+      -ms-animation: demo-md 3s 2s alternate infinite;
+      -o-animation: demo-md 3s 2s alternate infinite;
+      animation: demo-md 3s 2s alternate infinite;
+    }
+    @media only screen and (min-width: $screen-lg-min) {
+      max-width: 880px;
+      margin-left: -440px;
+      -webkit-animation: demo-lg 5s 2s alternate infinite;
+      -moz-animation: demo-lg 5s 2s alternate infinite;
+      -ms-animation: demo-lg 5s 2s alternate infinite;
+      -o-animation: demo-lg 5s 2s alternate infinite;
+      animation: demo-lg 5s 2s alternate infinite;
+    }
+    @media only screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+}
+.example {
+  background: #dedede;
+  li {
+    padding: 1em;
+    background: $brand-color;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
+.example__code {
   background: #272822;
   font-size: 18px;
   margin: 20px 0 90px;
   padding: 25px 20px;
   .code {
-    &-white,
-    &-pink,
-    &-green,
-    &-yellow,
-    &-purple,
-    &-grey,
-    &-blue {
+    &--white,
+    &--pink,
+    &--green,
+    &--yellow,
+    &--purple,
+    &--grey,
+    &--blue {
       background: none;
       padding: 0;
     }
-    &-white {
+    &--white {
       color: #fff;
     }
-    &-pink {
+    &--pink {
       color: #f92772;
     }
-    &-green {
+    &--green {
       color: #a6e22d;
     }
-    &-yellow {
+    &--yellow {
       color: #e6db74;
     }
-    &-purple {
+    &--purple {
       color: #ae81ff;
     }
-    &-grey {
+    &--grey {
       color: #69715e;
     }
-    &-blue {
+    &--blue {
       color: #66d9ef;
     }
   }
@@ -240,15 +303,6 @@ code {
   li {
     font-size: 20px;
     line-height: 3;
-  }
-}
-.example {
-  background: #dedede;
-  li {
-    padding: 1em;
-    background: $brand-color;
-    color: #fff;
-    border: 1px solid #fff;
   }
 }
 .grid-system__columns .example {

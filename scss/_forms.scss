@@ -56,6 +56,7 @@ select:-moz-focusring {
   label {
     @extend %displayFlex;
     @extend %inputStyle;
+    text-align: center;
     justify-content: center;
     padding: 10px;
     color: $input__text;

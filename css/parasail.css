@@ -136,6 +136,7 @@ select:-moz-focusring {
 .form__radio-btn {
   position: relative; }
   .form__radio-btn label {
+    text-align: center;
     justify-content: center;
     padding: 10px;
     color: #3d2566;
