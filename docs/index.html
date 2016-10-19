@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Parasail Health - Worry less. Heal more.</title>
+	<meta name="description" content="" />
+
+	<link rel="icon" type="image/png" href="favicon.png" />
+
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header>
+		<div class="grid">
+			<h1 class="grid__col-sm-9 grid__col-xs-6">
+				<a class="logo--md" href="https://www.parasail.com/" target="_blank">Parasail</a>
+			</h1>
+			<nav class="grid__col-sm-2 grid__col-xs-6">
+				<dl class="menu">
+					<dt>Menu</dt>
+					<dd>
+						<a href="#introduction"><span>01</span> Introduction</a>
+					</dd>
+					<dd>
+						<a href="#getting-started"><span>02</span> Getting Started</a>
+					</dd>
+					<dd>
+						<a href="#bem"><span>03</span> BEM</a>
+					</dd>
+					<dd>
+						<a href="#technologies"><span>04</span> Technologies</a>
+					</dd>
+					<dd>
+						<a href="#grid-system"><span>05</span> Grid</a>
+					</dd>
+					<dd>
+						<a href="#flexbox"><span>06</span> Flexbox</a>
+					</dd>
+					<dd>
+						<a href="#forms"><span>07</span> Forms</a>
+					</dd>
+					<dd>
+						<a href="#typography"><span>08</span> Typography</a>
+					</dd>
+					<dd>
+						<a href="#buttons"><span>09</span> Buttons</a>
+					</dd>
+					
+					<dd>
+						<a href="#logos"><span>10</span> Logos</a>
+					</dd>
+					<dd>
+						<a href="#icons"><span>11</span> Icons</a>
+					</dd>
+					<dd>
+						<a href="#lists"><span>12</span> Lists</a>
+					</dd>
+					<dd>
+						<a href="#best-ptractices"><span>13</span> Best Practices in CSS</a>
+					</dd>
+				</dl>
+			</nav>
+			<a href="//github.com/Parasail-Health/parasail" target="_blank" class="grid__col-sm-1 link--github">Github</a>
+		</div>
+	</header>
+	
+	<section class="hero">
+		<article class="text--center">
+			<h1>Parasail</h1>
+			<p><span>A micro</span> CSS framework</p>
+		</article>
+	</section>
+	<main>
+		<section class="table-of-content">
+			<h2 class="text--center">Table of contents</h2>
+			<ol class="grid">
+				<div class="grid__col-sm-6 grid__col-xs-12">
+					<li>
+						<a href="#introduction"><span>01</span> Introduction</a>
+					</li>
+					<li>
+						<a href="#getting-started"><span>02</span> Getting Started</a>
+					</li>
+					<li>
+						<a href="#bem"><span>03</span> BEM</a>
+					</li>
+					<li>
+						<a href="#technologies"><span>04</span> Technologies</a>
+					</li>
+					<li>
+						<a href="#grid-system"><span>05</span> Grid</a>
+					</li>
+					<li>
+						<a href="#flexbox"><span>06</span> Flexbox</a>
+					</li>
+					<li>
+						<a href="#forms"><span>07</span> Forms</a>
+					</li>
+				</div>
+				<div class="grid__col-sm-6 grid__col-xs-12">
+					<li>
+						<a href="#typography"><span>08</span> Typography</a>
+					</li>
+					<li>
+						<a href="#buttons"><span>09</span> Buttons</a>
+					</li>
+					
+					<li>
+						<a href="#logos"><span>10</span> Logos</a>
+					</li>
+					<li>
+						<a href="#icons"><span>11</span> Icons</a>
+					</li>
+					<li>
+						<a href="#lists"><span>12</span> Lists</a>
+					</li>
+					<li>
+						<a href="#best-ptractices"><span>13</span> Best Practices in CSS</a>
+					</li>
+				</div>
+			</ol>
+		</section>
+		<section id="introduction" class="introduction">
+			<h2 class="text--center">01 - Introduction</h2>
+			<p>Parasail is a minimalistic CSS framework from <a href="https://www.parasail.com/" target="_blank">Parasail Health</a> using SASS and Flexbox. It's main feature is a Flexbox based grid system which lets you define column widths based on the viewport.</p>
+		</section>
+		<section id="getting-started" class="getting-started">
+			<h2 class="text--center">02 - Getting Started</h2>
+			<div class="subsection">
+				<h3>Install with npm</h3>
+				<p>Install Parasail using npm:</p>
+				<p><code class="example example__command">$ npm install parasail</code></p>
+			</div>
+
+			<div class="subsection">
+				<h3>Install with Github</h3>
+				<p>Clone the Github repo:</p>
+				<a href="//github.com/Parasail-Health/parasail" target="_blank" class="btn--default">Clone</a>
+			</div>
+
+			<div class="subsection">
+				<h3>Usage</h3>
+				<p>You can include the file <code>parasail.css</code> in your header:</p>
+				<div class="example-code">
+					<code class="code-white"><</code>
+					<code class="code-pink">link </code>
+					<code class="code-green">rel</code>
+					<code class="code-white">=</code>
+					<code class="code-yellow">"stylesheet" </code>
+					<code class="code-green">href</code>
+					<code class="code-white">=</code>
+					<code class="code-yellow">"path/to/node_modules/parasail/css/parasail.min.css"</code>
+					<code class="code-white">></code>
+				</div>
+
+				<p>Or you can import the <code>parasail.scss</code> file in your own scss file if you want to use our variables:</p>
+				<div class="example-code">
+					<code class="code-pink">@import </code>
+					<code class="code-yellow">'path/to/node_modules/parasail/scss/parasail.scss'</code>
+					<code class="code-white">;</code>
+				</div>
+			</div>
+
+			<div class="subsection">
+				<h3>Create your own theme</h3>
+				<p>We included a file called <code>_variables.scss</code> in the <code>scss</code> folder which by default loads our Parasail styles. By editing this file you can easily create your own theme in just a few minutes.</p>
+			</div>
+		</section>
+		<section id="bem" class="bem">
+			<h2 class="text--center">03 - BEM - Naming Conventions</h2>
+			<p>BEM stands for Block, Element, Modifier, it is a naming convention for classes in HTML and CSS which assists you to write modular CSS. The goal of BEM is, to help developers better understand the relationship between HTML and CSS by quickly giving them an idea of which element depends on another.</p>
+			<p>BEM is successful not because it gives you a lot of options but because it limits what you are allowed to do. The problem it's trying to avoid is getting your rules to match the elements you want, without them accidentally matching the elements you don’t want to affect.</p>
+			<ul class="bem__explanation-list">
+				<li><code>Block</code> is a top-level abstraction of a new component.</li>
+				<div class="example-code">
+					<code class="code-white"><</code>
+					<code class="code-pink">button </code>
+					<code class="code-green">class</code>
+					<code class="code-white">=</code>
+					<code class="code-yellow">"btn"</code>
+					<code class="code-white">></code>
+					<code class="code-white">Block</code>
+					<code class="code-white">&lt;/</code>
+					<code class="code-pink">button</code>
+					<code class="code-white">></code>
+				</div>
+				<li><code>Element</code> depends upon the block.</li>
+				<div class="example-code">
+					<code class="code-white"><</code>
+					<code class="code-pink">button </code>
+					<code class="code-green">class</code>
+					<code class="code-white">=</code>
+					<code class="code-yellow">"btn"</code>
+					<code class="code-white">></code>
+					<br>
+						<code class="code-white" style="padding-left: 50px;"><</code>
+						<code class="code-pink">p </code>
+						<code class="code-green">class</code>
+						<code class="code-white">=</code>
+						<code class="code-yellow">"btn__text"</code>
+						<code class="code-white">></code>
+						<code class="code-white">Element</code>
+						<code class="code-white">&lt;/</code>
+						<code class="code-pink">p</code>
+						<code class="code-white">></code>
+					<br>
+					<code class="code-white">&lt;/</code>
+					<code class="code-pink">button</code>
+					<code class="code-white">></code>
+				</div>
+				<li><code>Modifier</code> changes the style of the block.</li>
+				<div class="example-code">
+					<code class="code-white"><</code>
+					<code class="code-pink">button </code>
+					<code class="code-green">class</code>
+					<code class="code-white">=</code>
+					<code class="code-yellow">"btn--green"</code>
+					<code class="code-white">></code>
+					<code class="code-white">Modifier</code>
+					<code class="code-white">&lt;/</code>
+					<code class="code-pink">button</code>
+					<code class="code-white">></code>
+				</div>
+			</ul>
+		</section>
+		<section id="technologies" class="technologies">
+			<h2 class="text--center">04 - Technologies</h2>
+			<div class="subsection">
+				<h3>SASS</h3>
+				<p>Sass is the most popular CSS pre-processor on the market today. It is a lightweight tool that lets us write fast, reusable CSS by offering key features such as nested selectors, mixins, conditional statements, and variable declarations.</p>
+			</div>
+			
+			<div id="subsection" class="subsection">
+				<h3>Flexbox</h3>
+				<p>Flexbox is a new layout technique that was introduced in CSS3. One of the most difficult concepts for new CSS users to grasp is how to properly align, scale, and position elements across different screen sizes. With Flexbox, we can address this problem with 1-2 lines of code.</p>
+			</div>
+		</section>
+		<section id="grid-system" class="grid-system">
+			<h2 class="text--center">05 - Grid system</h2>
+
+			<div class="subsection">
+				<h3>Grid</h3>
+				<article>
+					<h4>.grid</h4>
+					<p>The grid system is based on Flexbox, <code>.grid</code> defines a flex container by setting display to <code>flex</code>. It enables a flex context for all its direct children, which are called <code>flex items</code>.</p>
+				</article>
+			</div>
+
+			<div class="subsection">
+				<h3>Grid columns</h3>
+				<article class="grid-system__columns">
+					<h4>.grid_col-x</h4>
+					<p>Different column sizes can be defined by using <code>.grid__col-1</code> to <code>.grid__col-12</code>, with <code>.grid__col-1</code> being the smallest column size and <code>.grid__col-12</code> taking up 100% of its parent container.</p>
+					<p><code>.grid__col-auto</code> creates a column that will take up however much space is left in the row.</p>
+					<ul class="grid direction-column example">
+						<li class="grid__col-1">.grid__col-1</li>
+						<li class="grid__col-2">.grid__col-2</li>
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-4">.grid__col-4</li>
+						<li class="grid__col-5">.grid__col-5</li>
+						<li class="grid__col-6">.grid__col-6</li>
+						<li class="grid__col-7">.grid__col-7</li>
+						<li class="grid__col-8">.grid__col-8</li>
+						<li class="grid__col-9">.grid__col-9</li>
+						<li class="grid__col-10">.grid__col-10</li>
+						<li class="grid__col-11">.grid__col-11</li>
+						<li class="grid__col-12">.grid__col-12</li>
+					</ul>
+					<ul class="grid example" style="margin: 0;">
+						<li class="grid__col-auto">.grid__col-auto</li>
+						<li class="grid__col-auto">.grid__col-auto</li>
+						<li class="grid__col-auto">.grid__col-auto</li>
+					</ul>
+				</article>
+			</div>
+
+			<div class="subsection">
+				<h3>Responsive Layout</h3>
+				<article class="responsive-layout">
+					<p>It is possible to define different column widths for each viewport by specifying the viewport width in the column class: <code>.grid__col-xs-(1-12)</code>, <code>.grid__col-sm-(1-12)</code>, <code>.grid__col-md-(1-12)</code> or <code>.grid__col-lg-(1-12)</code>.</p>
+					<iframe src="demo-layout.html" class="demo-layout"></iframe>
+				</article>
+			</div>
+		</section>
+		<section id="flexbox" class="flexbox">
+			<h2 class="text--center">06 - Flexbox</h2>
+
+			<div class="subsection">
+				<h3>Flex Direction</h3>
+				<p>Flex Direction defines the direction in which the flex items are placed in the flex container. It is influenced by the text direction property.</p>
+				<article>
+					<h4>.direction-row</h4>
+					<p>This is the default value, the direction will be the same as the text direction.</p>
+					<ul class="grid direction-row example">
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-4">.grid__col-4</li>
+						<li class="grid__col-5">.grid__col-5</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.direction-row-reverse</h4>
+					<p>Setting the flex direction to <code>row-reverse</code> will switch the text direction to the opposite.</p>
+					<ul class="grid direction-row-reverse example">
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-4">.grid__col-4</li>
+						<li class="grid__col-5">.grid__col-5</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.direction-column</h4>
+					<p><code>Direction-column</code> behaves the same way as <code>direction-row</code> but it influences the vertical direction, so top to bottom.</p>
+					<ul class="grid direction-column example">
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-4">.grid__col-4</li>
+						<li class="grid__col-5">.grid__col-5</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.direction-column-reverse</h4>
+					<p><code>Direction-column-reverse</code> behaves the same way as <code>row-reverse</code> but it influences the vertical direction, so top to bottom.</p>
+					<ul class="grid direction-column-reverse example">
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-4">.grid__col-4</li>
+						<li class="grid__col-5">.grid__col-5</li>
+					</ul>
+				</article>
+			</div>
+
+			<div class="subsection">
+				<h3>Flex wrap</h3>
+				<p><code>Flex-wrap</code> defines whether the flex items are forced in a single line or can be flowed into multiple lines if there isn't enough room for them on one flex line.</p>
+				<article>
+					<h4>.nowrap</h4>
+					<p>Default value, the flex items will not wrap.</p>
+					<ul class="grid nowrap example">
+						<li class="grid__col-4">.grid__col-4</li>
+						<li class="grid__col-5">.grid__col-5</li>
+						<li class="grid__col-6">.grid__col-6</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.wrap</h4>
+					<p>The flex items will wrap if necessary.</p>
+					<ul class="grid wrap example">
+						<li class="grid__col-4">.grid__col-4</li>
+						<li class="grid__col-5">.grid__col-5</li>
+						<li class="grid__col-6">.grid__col-6</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.wrap-reverse</h4>
+					<p>The flex items will wrap if necessary but in reverse order.</p>
+					<ul class="grid wrap-reverse example">
+						<li class="grid__col-4">.grid__col-4</li>
+						<li class="grid__col-5">.grid__col-5</li>
+						<li class="grid__col-6">.grid__col-6</li>
+					</ul>
+				</article>
+			</div>
+
+			<div class="subsection">
+				<h3>Justify content</h3>
+				<p><code>Justify-content</code> defines how flex items are aligned horizontally. It helps distribute extra space between the items when they don’t use all available space on the main-axis.</p>
+				<article>
+					<h4>.justify-start</h4>
+					<p>Default value, the items are positioned at the beginning of the container.</p>
+					<ul class="grid justify-start example">
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-3">.grid__col-3</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.justify-end</h4>
+					<p>The items are positioned at the end of the container.</p>
+					<ul class="grid justify-end example">
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-3">.grid__col-3</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.justify-center</h4>
+					<p><code>Justify-end</code> will position the items at the center of the container.</p>
+					<ul class="grid justify-center example">
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-3">.grid__col-3</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.justify-space-between</h4>
+					<p>Items are evenly spread horizontally, the first item is at the beginning of the container, the last item on the end of the container. The space gets distributed between the items.</p>
+					<ul class="grid justify-space-between example">
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-3">.grid__col-3</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.justify-space-around</h4>
+					<p>The items are positioned with equal space before, between and after them.</p>
+					<ul class="grid justify-space-around example">
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-3">.grid__col-3</li>
+					</ul>
+				</article>
+			</div>
+
+			<div class="subsection">
+				<h3>Align items</h3>
+				<p>This part is one of the best features of Flexbox because before Flexbox it was very painful to properly center elements vertically.</p>
+				<p><code>Align-items</code> defines how flex items are aligned vertically (cross axis) when they don’t take up all of the available space in the container. It is the justify-content version for the cross-axis.</p>
+				<article>
+					<h4>.align-stretch</h4>
+					<p>Default value, it stretches the height of the flex item to fit the container (still respects min-width/max-width)</p>
+					<ul class="grid align-stretch example">
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-4">
+							.grid__col-4<br>
+							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+							(more text)
+						</li>
+						<li class="grid__col-5">.grid__col-5</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.align-start</h4>
+					<p>Flex items are positioned at the top of the container.</p>
+					<ul class="grid align-start example">
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-4">
+							.grid__col-4<br>
+							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+							(more text)
+						</li>
+						<li class="grid__col-5">.grid__col-5</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.align-end</h4>
+					<p>Flex items are positioned at the bottom of the container.</p>
+					<ul class="grid align-end example">
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-4">
+							.grid__col-4<br>
+							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+							(more text)
+						</li>
+						<li class="grid__col-5">.grid__col-5</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.align-center</h4>
+					<p>Flex items are positioned at the vertical center of the container (centered in the cross-axis).</p>
+					<ul class="grid align-center example">
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-4">
+							.grid__col-4<br>
+							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+							(more text)
+						</li>
+						<li class="grid__col-5">.grid__col-5</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.align-baseline</h4>
+					<p>Flex items are positioned at the baseline of the container.</p>
+					<ul class="grid align-baseline example">
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-4" style="line-height: 2; padding-top: 20px;">
+							.grid__col-4<br>
+							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+							(more text)
+						</li>
+						<li class="grid__col-5">.grid__col-5</li>
+					</ul>
+				</article>
+			</div>
+
+			<div class="subsection">
+				<h3>Align Self</h3>
+				<p><code>Align Self</code> accepts the same 5 values as <code>align items</code>, with the difference that you apply it to individual flex items in order to overwrite <code>align items</code>.</p>
+				<article>
+					<h4>.align-self-stretch</h4>
+					<p>Default value, it stretches the height of the flex item to fit the container (still respects min-width/max-width)</p>
+					<ul class="grid align-start example">
+						<li class="grid__col-3 align-self-stretch">.grid--align-self-stretch</li>
+						<li class="grid__col-3">
+							.grid__col-3<br>
+							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+							(more text)
+						</li>
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-3">.grid__col-3</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.align-self-start</h4>
+					<p>Flex item gets positioned at the top of the container.</p>
+					<ul class="grid align-start example">
+						<li class="grid__col-3 align-self-start">.grid--align-self-start</li>
+						<li class="grid__col-3">
+							.grid__col-3<br>
+							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+							(more text)
+						</li>
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-3">.grid__col-3</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.align-self-end</h4>
+					<p>Flex item gets positioned at the bottom of the container.</p>
+					<ul class="grid align-start example">
+						<li class="grid__col-3 align-self-end">.grid--align-self-end</li>
+						<li class="grid__col-3">
+							.grid__col-3<br>
+							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+							(more text)
+						</li>
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-3">.grid__col-3</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.align-self-center</h4>
+					<p>Flex item gets positioned at the vertical center of the container (centered in the cross-axis).</p>
+					<ul class="grid align-start example">
+						<li class="grid__col-3 align-self-center">.grid--align-self-center</li>
+						<li class="grid__col-3">
+							.grid__col-3<br>
+							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+							(more text)
+						</li>
+						<li class="grid__col-3">.grid__col-3</li>
+						<li class="grid__col-3">.grid__col-3</li>
+					</ul>
+				</article>
+				<article>
+					<h4>.align-self-baseline</h4>
+					<p>Flex item gets positioned at the baseline of the container.</p>
+					<ul class="grid align-start example">
+						<li class="grid__col-3 align-self-baseline">.grid--align-self-baseline</li>
+						<li class="grid__col-3" style="line-height: 2; padding-top: 20px;">
+							.grid__col-3<br>
+							Hodor. Hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor hodor; hodor hodor... <br>
+							(more text)
+						</li>
+						<li class="grid__col-3" style="line-height: 2; padding-top: 20px;">.grid__col-3</li>
+						<li class="grid__col-3" style="line-height: 2; padding-top: 20px;">.grid__col-3</li>
+					</ul>
+				</article>
+			</div>
+		</section>
+		<section id="forms" class="forms">
+			<h2 class="text--center">07 - Forms</h2>
+			<div class="subsection">
+				<p>We added basic styles for form elements, all values for form variables can be changed in the file <code>_variables.scss</code>.</p>
+			</div>
+
+			<div class="subsection">
+				<h3>Label</h3>
+				<h4>.form__label</h4>
+				<p><code>.form__label</code> gives you the option to change the font-size as well as the color.</p>
+			</div>
+
+			<div class="subsection">
+				<h3>Input + Select</h3>
+				<h4>.form__input</h4>
+				<p><code>.form__input</code> lets you change the font-size, text, placeholder, background and border color.</p>
+			</div>
+
+			<div class="subsection">
+				<h3>Radio Buttons</h3>
+				<h4>.form__radio-btn</h4>
+				<p>Input fields with type="radio" don't allow you to set a placeholder. To add a placeholder to a radio button, you need to add a label and make the label the actual placeholder. In order to still make it look like a button, wrap the label as well as the input in a div with the class="form__radio-btn".</p>
+				<div class="example-code">
+					<code class="code-white"><</code>
+					<code class="code-pink">div </code>
+					<code class="code-green">class</code>
+					<code class="code-white">=</code>
+					<code class="code-yellow">"form__radio-btn"</code>
+					<code class="code-white">></code>
+					<br>
+						<code class="code-white" style="padding-left: 50px"><</code>
+						<code class="code-pink">input </code>
+						<code class="code-green">id</code>
+						<code class="code-white">=</code>
+						<code class="code-yellow">"id"</code>
+						<code class="code-green">name</code>
+						<code class="code-white">=</code>
+						<code class="code-yellow">"name"</code>
+						<code class="code-green">type</code>
+						<code class="code-white">=</code>
+						<code class="code-yellow">"radio"</code>
+						<code class="code-white">/&gt;</code>
+					<br>
+						<code class="code-white" style="padding-left: 50px;"><</code>
+						<code class="code-pink">label </code>
+						<code class="code-green">for</code>
+						<code class="code-white">=</code>
+						<code class="code-yellow">"id"</code>
+						<code class="code-white">></code>
+						<code class="code-white">Great 760+</code>
+						<code class="code-white">&lt;/</code>
+						<code class="code-pink">label</code>
+						<code class="code-white">></code>
+					<br>
+					<code class="code-white">&lt;/</code>
+					<code class="code-pink">div</code>
+					<code class="code-white">></code>
+				</div>
+			</div>
+
+			<h3>Example:</h3>
+			<form class="grid example justify-space-between" style="padding: 50px; background: #eee;">
+				<span class="grid__col-2 code-pink">Label:</span>
+				<label for="id_first_name" class="grid__col-10 form__label">First Name</label>
+				<span class="grid__col-2 code-pink">Input:</span>
+				<input id="id_first_name" class="grid__col-10 form__input" name="first_name" type="text" value="" required="" placeholder="test">
+				<span class="grid__col-2 code-pink">Select:</span>
+				<select class="grid__col-10 form__input" id="id_income_type" name="income_type" required="">
+					<option value="" disabled="" hidden="">Select income type</option>
+					<option value="employment">Employed (Non-Military)</option>
+					<option value="military">Employed (Military)</option>
+					<option value="self_employment" selected="selected">Self Employed</option>
+					<option value="retired_benefits">Benefits (Permanent)</option>
+					<option value="unemployment">Benefits (Temporary)</option>
+					<option value="other">Other</option>
+				</select>
+				<span class="grid__col-2 code-pink">Radio:</span>
+				<div class="grid__col-3 form__radio-btn">
+					<input id="id_credit_score_760" name="credit_score" type="radio" required="">
+					<label for="id_credit_score_760">Great 760+</label>
+				</div>
+				<div class="grid__col-3 form__radio-btn">
+					<input id="id_credit_score_700" name="credit_score" type="radio" required="">
+					<label for="id_credit_score_700">Great 700+</label>
+				</div>
+				<div class="grid__col-3 form__radio-btn">
+					<input id="id_credit_score_640" name="credit_score" type="radio" required="">
+					<label for="id_credit_score_640">Great 640+</label>
+				</div>
+			</form>
+		</section>
+		<section id="typography" class="typography">
+			<h2 class="text--center">08 - Typography</h2>
+			<article>
+				<h4>.text--left</h4>
+				<p>Aligns the text on the left.</p>
+				<ul class="grid text--left example">
+					<li class="grid__col-4">This text is aligned to the left.</li>
+					<li class="grid__col-4">This text is aligned to the left.</li>
+					<li class="grid__col-4">This text is aligned to the left.</li>
+				</ul>
+			</article>
+			<article>
+				<h4>.text--center</h4>
+				<p>Aligns the text in the center.</p>
+				<ul class="grid text--center example">
+					<li class="grid__col-4">This text is centered.</li>
+					<li class="grid__col-4">This text is centered.</li>
+					<li class="grid__col-4">This text is centered.</li>
+				</ul>
+			</article>
+			<article>
+				<h4>.text--right</h4>
+				<p>Aligns the text on the right.</p>
+				<ul class="grid text--right example">
+					<li class="grid__col-4">This text is aligned to the right.</li>
+					<li class="grid__col-4">This text is aligned to the right.</li>
+					<li class="grid__col-4">This text is aligned to the right.</li>
+				</ul>
+			</article>
+			<article>
+				<h4>.text--uppercase</h4>
+				<p>Transforms all characters to uppercase.</p>
+				<ul class="grid text--uppercase example">
+					<li class="grid__col-4">This text is uppercase.</li>
+					<li class="grid__col-4">This text is uppercase.</li>
+					<li class="grid__col-4">This text is uppercase.</li>
+				</ul>
+			</article>
+			<article>
+				<h4>.text--lowercase</h4>
+				<p>Transforms all characters to lowercase.</p>
+				<ul class="grid text--lowercase example">
+					<li class="grid__col-4">This text is lowercase.</li>
+					<li class="grid__col-4">This text is lowercase.</li>
+					<li class="grid__col-4">This text is lowercase.</li>
+				</ul>
+			</article>
+			<article>
+				<h4>.text--capitalize</h4>
+				<p>Transforms the first character of each word to uppercase.</p>
+				<ul class="grid text--capitalize example">
+					<li class="grid__col-4">This text is capitalized.</li>
+					<li class="grid__col-4">This text is capitalized.</li>
+					<li class="grid__col-4">This text is capitalized.</li>
+				</ul>
+			</article>
+		</section>
+		<section id="buttons" class="buttons">
+			<h2 class="text--center">09 - Buttons</h2>
+			<p>The theme currently includes 4 different button styles, you can update the colors as well as the font-size in the <code>_variables.scss</code> file.</p>
+			<ul class="grid">
+				<li class="grid__col-md-6 grid__col-xs-12">
+					<h4>.btn--primary</h4>
+					<button class="btn--primary">Primary</button>
+				</li>
+				<li class="grid__col-md-6 grid__col-xs-12">
+					<h4>.btn--default</h4>
+					<button class="btn--default">Default</button>
+				</li>
+				<li class="grid__col-md-6 grid__col-xs-12">
+					<h4>.btn--secondary</h4>
+					<button class="btn--secondary">Secondary</button>
+				</li>
+				<li class="grid__col-md-6 grid__col-xs-12">
+					<h4>.btn--error</h4>
+					<button class="btn--error">Error</button>
+				</li>
+			</ul>
+		</section>
+		<section id="logos" class="logos">
+			<h2 class="text--center">10 - Logos</h2>
+
+			<div class="subsection">
+				<p>By default the theme is loading the Parasail logo and gives you the option to use it in 3 different sizes. Simply go into the <code>_variables.scss</code> file and change the <code>$logo</code> variable to load your own logo. If you want to change the width and height ratio, you can do this by changing the values in the <code>_logos.scss</code> file.</p>
+				<ul class="grid">
+					<li class="grid__col-md-4 grid__col-xs-12">
+						<h4>.logo</h4>
+						<h5 class="logo"></h5>
+					</li>
+					<li class="grid__col-md-4 grid__col-xs-12">
+						<h4>.logo--md</h4>
+						<h5 class="logo--md"></h5>
+					</li>
+					<li class="grid__col-md-4 grid__col-xs-12">
+						<h4>.logo--xs</h4>
+						<h5 class="logo--xs"></h5>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section id="icons" class="icons">
+			<h2 class="text--center">11 - Icons</h2>
+			<p>These are some icons we currently use, you can update the colors as well as the font-sizes in the <code>_variables.scss</code> file.</p>
+			<article>
+				<h4>.icon__arrow</h4>
+				<p><span class="icon__arrow"></span></p>
+				<div class="example-code">
+					<code class="code-white"><</code>
+					<code class="code-pink">span </code>
+					<code class="code-green">class</code>
+					<code class="code-white">=</code>
+					<code class="code-yellow">"icon__arrow"</code>
+					<code class="code-white">></code>
+					<code class="code-purple">&</code>
+					<code class="code-purple">#x2794</code>
+					<code class="code-purple">;</code>
+					<code class="code-white">&lt;/</code>
+					<code class="code-pink">span</code>
+					<code class="code-white">></code>
+				</div>
+			</article>
+
+			<article>
+				<h4>.icon__close</h4>
+				<p><span class="icon__close"></span></p>
+				<div class="example-code">
+					<code class="code-white"><</code>
+					<code class="code-pink">span </code>
+					<code class="code-green">class</code>
+					<code class="code-white">=</code>
+					<code class="code-yellow">"icon__close"</code>
+					<code class="code-white">></code>
+					<code class="code-purple">&</code>
+					<code class="code-purple">times</code>
+					<code class="code-purple">;</code>
+					<code class="code-white">&lt;/</code>
+					<code class="code-pink">span</code>
+					<code class="code-white">></code>
+				</div>
+			</article>
+
+			<article>
+				<h4>.icon__question-mark</h4>
+				<p><span class="icon__question-mark"></span></p>
+				<div class="example-code">
+					<code class="code-white"><</code>
+					<code class="code-pink">span </code>
+					<code class="code-green">class</code>
+					<code class="code-white">=</code>
+					<code class="code-yellow">"icon__question-mark"</code>
+					<code class="code-white">></code>
+					<code class="code-purple">?</code>
+					<code class="code-white">&lt;/</code>
+					<code class="code-pink">span</code>
+					<code class="code-white">></code>
+				</div>
+			</article>
+		</section>
+		<section id="lists" class="lists">
+			<h2 class="text--center">12 - Lists</h2>
+			<article>
+				<h4>.ordered-list</h4>
+				<p>The list items are marked with numbers.</p>
+				<ol class="ordered-list">
+					<li>Ordered List Item 1</li>
+					<li>Ordered List Item 2</li>
+					<li>Ordered List Item 3</li>
+				</ol>
+			</article>
+			<article>
+				<h4>.unordered-list</h4>
+				<p>The list items are marked with bullets.</p>
+				<ol class="unordered-list">
+					<li>Unordered List Item 1</li>
+					<li>Unordered List Item 2</li>
+					<li>Unordered List Item 3</li>
+				</ol>
+			</article>
+		</section>
+		<section id="best-ptractices" class="best-ptractices">
+			<h2 class="text--center">13 - Best Practices in CSS</h2>
+
+			<div class="subsection">
+				<h3>Formatting</h3>
+				<ul class="unordered-list">
+					<li>Don't nest further than 3 levels deep</li>
+					<li>Use 2 spaces for indentation</li>
+					<li>When using multiple selectors in a rule declaration, give each selector it's own line</li>
+					<li>Put a space before the opening brace { in rule declarations</li>
+					<li>In properties, put a space after, but not before, the : character.</li>
+					<li>Put closing braces } of rule declarations on a new line</li>
+				</ul>
+			</div>
+
+			<div class="subsection">
+				<h3>IDs</h3>
+				<ul class="unordered-list">
+					<li>Avoid using IDs unless that element is suppose to be a Javascript identifier.</li>
+					<li>They are not reusable and introduce unnecessarily specificity to your rule declaration.</li>
+				</ul>
+			</div>
+
+			<div class="subsection">
+				<h3>Comments</h3>
+				<ul class="unordered-list">
+					<li>Put comment on its own line</li>
+					<li>Avoid using end-of-line comments</li>
+					<li>Write comments for code that isn't self-documenting (for example Browser hacks)</li>
+					<li>When writing comments in SASS, keep in mind that comments using the double slash ( <code>// Double slash comment</code> ) will not be compiled to regular CSS while comments using the slash + asterix ( <code>/* Comment using slash + asterix */</code> ) will be compiled.</li>
+				</ul>
+				<div class="example-code">
+					<p>
+						<code class="code-green">.grid</code>
+						<code class="code-white">,</code>
+					</p>
+					<p><code class="code-green">.grid__col-auto </code>
+						<code class="code-white">{</code>
+					</p>
+						<p><code class="code-grey" style="padding-left: 50px;">// display: inline-block added for IE support</code></p>
+						<p>
+							<code class="code-blue" style="padding-left: 50px;">display</code>
+							<code class="code-white">:</code>
+							<code class="code-blue">inline</code>
+							<code class="code-white">-</code>
+							<code class="code-blue">block</code>
+							<code class="code-white">;</code>
+						</p>
+					<p><code class="code-white">}</code></p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="text--center">
+		<p>Parasail Health &copy 2016</p>
+	</footer>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		
+		$('.menu dd a, .table-of-content ol li a').click(function(e){
+            var url = $(this).attr('href');
+    
+            $('html, body').animate({
+                scrollTop: $('section'+url+'').offset().top - 120
+            }, 500, 'swing');
+    
+    		window.history.pushState('', document.title, url);
+            e.preventDefault();
+        });
+	</script>
+</body>
+</html>

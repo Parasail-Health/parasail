@@ -1,0 +1,262 @@
+@import '../../parasail.scss';
+
+
+@mixin animation($animation: demo 5s 2s alternate infinite) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -ms-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+
+@include keyframes(demo) {
+  0% {
+    max-width: 1200px;
+    margin-left: -600px;
+  }
+  20% {
+    max-width: 1200px;
+    margin-left: -600px;
+  }
+  40% {
+    max-width: 993px;
+    margin-left: -496.5px;
+  }
+  60% {
+    max-width: 993px;
+    margin-left: -496.5px;
+  }
+  80% {
+    max-width: 759px;
+    margin-left: -379.5px;
+  }
+  100% {
+    max-width: 759px;
+    margin-left: -379.5px;
+  }
+}
+
+
+header {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 17px;
+  padding: 34px 45px 15px;
+  background: #fff;
+  @include box-shadow;
+  .grid {
+    align-items: flex-end;
+  }
+}
+.menu {
+  position: absolute;
+  top: -25px;
+  height: 30px;
+  overflow: hidden;
+  &:hover {
+    height: auto;
+    cursor: pointer;
+    @include box-shadow(0px 10px 23px -6px #3d2665);
+  }
+}
+.menu dt,
+.menu dd {
+  padding: 5px 10px;
+  background: #fff;
+  color: $brand-color;
+}
+.menu dd {
+  a {
+    color: $brand-color;
+  }
+  &:hover {
+    background: $brand-color;
+    color: #fff;
+    a {
+      color: #fff;
+    }
+  }
+}
+@media only screen and (max-width: $screen-xs-max) {
+  .link--github {
+    display: none;
+  }
+}
+
+.hero {
+  height: 400px;
+  margin-top: 108px;
+  background: $brand-color;
+  article {
+    max-width: 245px;
+    margin: 80px auto 0;
+    color: #fff;
+    h1 {
+      font-size: 40px;
+      letter-spacing: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #fff;
+    }
+    p {
+      font-size: 31px;
+      letter-spacing: 8px;
+      span {
+        letter-spacing: 4px;
+      }
+    }
+  }
+}
+
+main {
+  @include container(980px);
+  padding: 50px 0 80px;
+}
+
+section {
+  padding: 50px 50px 80px;
+}
+@media only screen and (max-width: $screen-xs-max) {
+  section {
+    padding: 50px 15px 80px;
+  }
+}
+
+.table-of-content ol li {
+  font-size: 22px;
+  line-height: 2;
+  a {
+    color: $brand-color;
+    @include transition;
+    &:hover {
+      color: $accent-color;
+      @include transition;
+    }
+  }
+  span {
+    margin-right: 15px;
+  }
+}
+.subsection {
+  margin-bottom: 100px;
+}
+article {
+  margin: 35px 0 50px;
+}
+h2,
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #08ac91;
+}
+h2 {
+  font-size: 26px;
+  margin-bottom: 45px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ccc;
+}
+h3 {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: .5px;
+  margin: 25px 0 20px;
+  color: #3d2566;
+}
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+code {
+  background: #dedede;
+  padding: 2px 5px;
+}
+.responsive-layout {
+  p {
+    margin-bottom: 65px;
+  }
+}
+.demo-layout {
+  position: absolute;
+  left: 50%;
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: -600px;
+  @include animation;
+}
+.example-code {
+  background: #272822;
+  font-size: 18px;
+  margin: 20px 0 90px;
+  padding: 25px 20px;
+  .code {
+    &-white,
+    &-pink,
+    &-green,
+    &-yellow,
+    &-purple,
+    &-grey,
+    &-blue {
+      background: none;
+      padding: 0;
+    }
+    &-white {
+      color: #fff;
+    }
+    &-pink {
+      color: #f92772;
+    }
+    &-green {
+      color: #a6e22d;
+    }
+    &-yellow {
+      color: #e6db74;
+    }
+    &-purple {
+      color: #ae81ff;
+    }
+    &-grey {
+      color: #69715e;
+    }
+    &-blue {
+      color: #66d9ef;
+    }
+  }
+}
+.example__command {
+  display: block;
+  padding: 10px;
+}
+.bem__explanation-list {
+  margin-top: 50px;
+  li {
+    font-size: 20px;
+    line-height: 3;
+  }
+}
+.example {
+  background: #dedede;
+  li {
+    padding: 1em;
+    background: $brand-color;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
+.grid-system__columns .example {
+  margin-top: 50px;
+}
+
+footer {
+  padding: 35px 0 20px;
+  background: $brand-color;
+  color: #fff;
+}
