@@ -216,6 +216,30 @@ code {
   .responsive-layout__list {
     font-size: 18px;
     margin-bottom: 50px;
+    li {
+      &:nth-child(1) code {
+        margin-left: 52px;
+      }
+      &:nth-child(2) code {
+        margin-left: 31px;
+      }
+      &:nth-child(3) code {
+        margin-left: 52px;
+      }
+      &:nth-child(4) code {
+        margin-left: 5px;
+      }
+      @media only screen and (max-width: 425px) {
+        &:nth-child(1) code,
+        &:nth-child(2) code,
+        &:nth-child(3) code,
+        &:nth-child(4) code {
+          display: block;
+          text-align: center;
+          margin-left: 35px;
+        }
+      }
+    }
   }
   .demo-layout {
     position: absolute;

@@ -282,11 +282,11 @@
 				<h3>Responsive Layouts</h3>
 				<article class="responsive-layout">
 					<p>The grid system lets you create responsive layouts easily by giving you the option to define different column widths for each viewport. The viewports are determined by 4 different breakpoints:</p>
-					<ul class="unordered-list responsive-layout__list" style="margin-bottom: 50px;">
-						<li>Large: Minimum Width 1200px</li>
-						<li>Medium: Minimum Width 992px</li>
-						<li>Small: Minimum Width 768px</li>
-						<li>Extra Small: Maximum Width 767px</li>
+					<ul class="unordered-list responsive-layout__list">
+						<li>Large: <code>Viewport &ge; 1200px</code></li>
+						<li>Medium: <code>Viewport &ge; 992px</code></li>
+						<li>Small: <code>Viewport &ge; 768px</code></li>
+						<li>Extra Small: <code>Viewport &le; 767px</code></li>
 					</ul>
 					<p>Using elements with the class <code>.grid__col-lg-</code> defines column widths for the large viewport (min-width: 1200px). <code>.grid-col-md-</code> will affect viewports with a min-width of 992px. Elements with the class <code>.grid__col-sm-</code> will affect the small viewport (min-width: 768px) and <code>.grid__col-xs-</code> defines columns width for the extra small viewport (max-width: 767px).</p>
 					<iframe src="demo-layout.html" class="demo-layout"></iframe>
