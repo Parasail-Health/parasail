@@ -106,6 +106,20 @@ header {
   }
 }
 @media only screen and (max-width: $screen-xs-max) {
+  header {
+    padding: 34px 25px 15px;
+  }
+  .nav__logo {
+    a {
+      @include logo($width: 100px, $height: 40px);
+    }
+  }
+  .nav__menu {
+    top: -29px;
+    dt {
+      text-align: right;
+    }
+  }
   .link--github {
     display: none;
   }

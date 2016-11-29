@@ -1204,6 +1204,32 @@ header .grid {
 }
 
 @media only screen and (max-width: 767px) {
+  header {
+    padding: 34px 25px 15px;
+  }
+  .nav__logo a {
+    display: block;
+    width: 100px;
+    height: 40px;
+    text-indent: -9999px;
+  }
+  .nav__logo a:before {
+    float: left;
+    display: block;
+    width: 100px;
+    height: 40px;
+    content: '';
+    background: url("../img/logo_parasail.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    text-indent: 0;
+  }
+  .nav__menu {
+    top: -29px;
+  }
+  .nav__menu dt {
+    text-align: right;
+  }
   .link--github {
     display: none;
   }
