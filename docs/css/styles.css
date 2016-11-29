@@ -1301,6 +1301,12 @@ code {
   background: #3d2566;
 }
 
+@media only screen and (max-width: 767px) {
+  .hero {
+    margin-top: 89px;
+  }
+}
+
 .hero article {
   max-width: 245px;
   margin: 80px auto 0;

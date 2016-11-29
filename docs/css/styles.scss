@@ -177,6 +177,9 @@ code {
   height: 400px;
   margin-top: 108px;
   background: $brand-color;
+  @media only screen and (max-width: $screen-xs-max) {
+    margin-top: 89px;
+  }
   article {
     max-width: 245px;
     margin: 80px auto 0;
