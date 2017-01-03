@@ -5,12 +5,12 @@
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Parasail Health - Worry less. Heal more.</title>
+	<title>Parasail Beauty</title>
 	<meta name="description" content="" />
 
 	<link rel="icon" type="image/png" href="favicon.png" />
 
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/styles.autoprefix.css">
 </head>
 <body>
 	<header>
@@ -19,7 +19,7 @@
 				<a class="logo--md" href="https://www.parasail.com/" target="_blank">Parasail</a>
 			</h1>
 			<nav class="grid__col-sm-2 grid__col-xs-7 nav">
-				<dl class="nav__menu">
+				<dl id="nav__menu" class="nav__menu">
 					<dt>Menu</dt>
 					<dd>
 						<a href="#introduction"><span>01</span> Introduction</a>
@@ -273,7 +273,27 @@
 					<ul class="grid example" style="margin: 0;">
 						<li class="grid__col-auto">.grid__col-auto</li>
 						<li class="grid__col-auto">.grid__col-auto</li>
-						<li class="grid__col-auto">.grid__col-auto</li>
+					</ul>
+				</article>
+			</div>
+
+			<div class="subsection">
+				<h3>Grid Column Offset</h3>
+				<article class="grid-system__columns">
+					<h4>.grid_col-offset-x</h4>
+					<p>Offset a column by adding an offset class:</p>
+					<ul class="grid direction-column example">
+						<li class="grid__col-offset-1 grid__col-11">.grid__col-offset-1</li>
+						<li class="grid__col-offset-2 grid__col-10">.grid__col-offset-2</li>
+						<li class="grid__col-offset-3 grid__col-9">.grid__col-offset-3</li>
+						<li class="grid__col-offset-4 grid__col-8">.grid__col-offset-4</li>
+						<li class="grid__col-offset-5 grid__col-7">.grid__col-offset-5</li>
+						<li class="grid__col-offset-6 grid__col-6">.grid__col-offset-6</li>
+						<li class="grid__col-offset-7 grid__col-5">.grid__col-offset-7</li>
+						<li class="grid__col-offset-8 grid__col-4">.grid__col-offset-8</li>
+						<li class="grid__col-offset-9 grid__col-3">.grid__col-offset-9</li>
+						<li class="grid__col-offset-10 grid__col-2">.grid__col-offset-10</li>
+						<li class="grid__col-offset-11 grid__col-1">.grid__col-offset-11</li>
 					</ul>
 				</article>
 			</div>
@@ -283,12 +303,24 @@
 				<article class="responsive-layout">
 					<p>The grid system lets you create responsive layouts easily by giving you the option to define different column widths for each viewport. The viewports are determined by 4 different breakpoints:</p>
 					<ul class="unordered-list responsive-layout__list">
-						<li>Large: <code>Viewport &ge; 1200px</code></li>
-						<li>Medium: <code>Viewport &ge; 992px</code></li>
-						<li>Small: <code>Viewport &ge; 768px</code></li>
-						<li>Extra Small: <code>Viewport &le; 767px</code></li>
+						<li>Large: <code>Viewport &ge; 1200px</code>
+							<code>.grid__col-lg-x</code>
+							<code>.grid__col-offset-lg-x,</code>
+						</li>
+						<li>Medium: <code>Viewport &ge; 992px</code>
+							<code>.grid__col-md-x</code>
+							<code>.grid__col-md-offset-x</code>
+						</li>
+						<li>Small: <code>Viewport &ge; 768px</code>
+							<code>.grid__col-sm-x</code>
+							<code>.grid__col-sm-offset-x</code>
+						</li>
+						<li>Extra Small: <code>Viewport &le; 767px</code>
+							<code>.grid__col-xs-x</code>
+							<code>.grid__col-xs-offset-x</code>
+						</li>
 					</ul>
-					<p>Using elements with the class <code>.grid__col-lg-</code> defines column widths for the large viewport (min-width: 1200px). <code>.grid-col-md-</code> will affect viewports with a min-width of 992px. Elements with the class <code>.grid__col-sm-</code> will affect the small viewport (min-width: 768px) and <code>.grid__col-xs-</code> defines columns width for the extra small viewport (max-width: 767px).</p>
+					<p>Using elements with the class <code>.grid__col-lg-x</code> defines column widths for the large viewport (min-width: 1200px) and <code>.grid__col-offset-lg-x</code> will offset those columns. <code>.grid-col-md-x</code> and <code>.grid-col-offset-md-x</code> will affect viewports with a min-width of 992px. Elements with the class <code>.grid__col-sm-x</code> or <code>.grid__col-offset-sm-x</code> will affect the small viewport (min-width: 768px) and <code>.grid__col-xs-x</code> defines columns width for the extra small viewport (max-width: 767px) which can be offset with <code>.grid__col-xs-x</code>.</p>
 					<iframe src="demo-layout.html" class="demo-layout"></iframe>
 				</article>
 			</div>
@@ -371,7 +403,7 @@
 
 			<div class="subsection">
 				<h3>Justify content</h3>
-				<p><code>Justify-content</code> defines how flex items are aligned horizontally. It helps distribute extra space between the items when they don’t use all available space on the main-axis.</p>
+				<p><code>Justify-content</code> defines how flex items are aligned along the main-axis (that means by default horizontally, left to right). It helps distribute extra space between the items when they don't use all available space on the main-axis.</p>
 				<article>
 					<h4>.justify-start</h4>
 					<p>Default value, the items are positioned at the beginning of the container.</p>
@@ -422,7 +454,7 @@
 			<div class="subsection">
 				<h3>Align items</h3>
 				<p>This part is one of the best features of Flexbox because before Flexbox it was very painful to properly center elements vertically.</p>
-				<p><code>Align-items</code> defines how flex items are aligned vertically (cross axis) when they don’t take up all of the available space in the container. It is the justify-content version for the cross-axis.</p>
+				<p><code>Align-items</code> defines how flex items are aligned along the cross-axis (which is by default vertically, top to bottom) when they don't take up all of the available space in the container. It is the justify-content version for the cross-axis.</p>
 				<article>
 					<h4>.align-stretch</h4>
 					<p>Default value, it stretches the height of the flex item to fit the container (still respects min-width/max-width)</p>
@@ -883,8 +915,12 @@
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript">
+	  $('#nav__menu').click(function() {
+	  	$('#nav__menu').toggleClass('nav__menu--active');
+	  	console.log('bla');
+	  });
 		
-		$('.menu dd a, .table-of-content ol li a').click(function(e){
+		$('.nav__menu dd a, .table-of-content ol li a').click(function(e){
             var url = $(this).attr('href');
     
             $('html, body').animate({

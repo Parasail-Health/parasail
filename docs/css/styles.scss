@@ -73,11 +73,6 @@ header {
   top: -25px;
   height: 30px;
   overflow: hidden;
-  &:hover {
-    height: auto;
-    cursor: pointer;
-    @include box-shadow(0px 10px 23px -6px #3d2665);
-  }
 }
 .nav__menu dt,
 .nav__menu dd {
@@ -89,20 +84,33 @@ header {
   a {
     color: $brand-color;
   }
-  &:hover {
-    background: $brand-color;
-    color: #fff;
-    a {
-      color: #fff;
-    }
-  }
 }
 .link--github {
   color: $brand-color;
 }
+@media only screen and (min-width: $screen-md-min) {
+  .nav__menu {
+    &:hover {
+      height: auto;
+      cursor: pointer;
+      @include box-shadow(0px 10px 23px -6px #3d2665);
+    }
+    dd:hover {
+      background: $brand-color;
+      color: #fff;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
 @media only screen and (max-width: $screen-md-min) {
   .nav {
     align-items: flex-end;
+  }
+  .nav__menu--active {
+    height: auto;
+    @include box-shadow(0px 10px 23px -6px #3d2665);
   }
 }
 @media only screen and (max-width: $screen-xs-max) {
@@ -219,7 +227,7 @@ code {
   margin-bottom: 100px;
 }
 .responsive-layout {
-  height: 500px;
+  height: 970px;
   p {
     margin-bottom: 50px;
   }
@@ -234,27 +242,49 @@ code {
     font-size: 18px;
     margin-bottom: 50px;
     li {
-      &:nth-child(1) code {
+      margin-bottom: 25px;
+      code {
+        width: 300px;
+        max-width: 100%;
+        &:first-child {
+          display: inline-block;
+          text-align: center;
+          border-bottom: 1px solid #fff;
+        }
+        &:not(:first-child) {
+          display: block;
+          margin-left: 107px;
+        }
+      }
+      &:nth-child(1) code:first-child {
         margin-left: 52px;
       }
-      &:nth-child(2) code {
+      &:nth-child(2) code:first-child {
         margin-left: 31px;
       }
-      &:nth-child(3) code {
+      &:nth-child(3) code:first-child {
         margin-left: 52px;
       }
-      &:nth-child(4) code {
+      &:nth-child(4) code:first-child {
         margin-left: 5px;
       }
-      @media only screen and (max-width: 425px) {
-        &:nth-child(1) code,
-        &:nth-child(2) code,
-        &:nth-child(3) code,
-        &:nth-child(4) code {
-          display: block;
-          text-align: center;
-          margin-left: 35px;
+      @media only screen and (max-width: 530px) {
+        code {
+          &:first-child {
+            display: block;
+          }
+          &:not(:first-child) {
+            margin-left: 0;
+          }
         }
+        &:nth-child(1) code:first-child,
+        &:nth-child(2) code:first-child,
+        &:nth-child(3) code:first-child,
+        &:nth-child(4) code:first-child {
+          margin-left: 0;
+        }
+      }
+      @media only screen and (max-width: 425px) {
       }
     }
   }
@@ -348,6 +378,10 @@ code {
 }
 .grid-system__columns .example {
   margin-top: 50px;
+}
+.ordered-list,
+.unordered-list {
+  margin-left: 10px;
 }
 
 footer {
