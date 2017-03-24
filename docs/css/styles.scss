@@ -253,7 +253,7 @@ code {
         }
         &:not(:first-child) {
           display: block;
-          margin-left: 107px;
+          margin-left: 142px;
         }
       }
       &:nth-child(1) code:first-child {
@@ -268,7 +268,7 @@ code {
       &:nth-child(4) code:first-child {
         margin-left: 5px;
       }
-      @media only screen and (max-width: 530px) {
+      @media only screen and (max-width: 570px) {
         code {
           &:first-child {
             display: block;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Parasail Health
 Description: 
@@ -27,7 +28,7 @@ a {
   text-decoration: none; }
 
 body {
-  font-family: "Akkurat Light Pro";
+  font-family: "Akkurat Light Pro", Arial;
   -webkit-appearance: none; }
 
 button::-moz-focus-inner,
@@ -48,13 +49,141 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/*   ALERTS
+______________________ */
+@-moz-keyframes alertAnimation {
+  0% {
+    height: 0;
+    padding: 0; }
+  100% {
+    height: auto;
+    padding: 25px 15px; } }
+@-ms-keyframes alertAnimation {
+  0% {
+    height: 0;
+    padding: 0; }
+  100% {
+    height: auto;
+    padding: 25px 15px; } }
+@-o-keyframes alertAnimation {
+  0% {
+    height: 0;
+    padding: 0; }
+  100% {
+    height: auto;
+    padding: 25px 15px; } }
+@-webkit-keyframes alertAnimation {
+  0% {
+    height: 0;
+    padding: 0; }
+  100% {
+    height: auto;
+    padding: 25px 15px; } }
+@keyframes alertAnimation {
+  0% {
+    height: 0;
+    padding: 0; }
+  100% {
+    height: auto;
+    padding: 25px 15px; } }
+.alert--success {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  font-size: 20px;
+  text-align: center;
+  padding: 0;
+  background: #1ea98f;
+  color: #fff;
+  -webkit-animation: alertAnimation 1s linear 1s forwards;
+  animation: alertAnimation 1s linear 1s forwards; }
+  .alert--success:before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    content: "L";
+    font-size: 30px;
+    margin: 0 auto 15px;
+    border: 2px solid #fff;
+    border-radius: 100%; }
+  .alert--success:before {
+    transform: scaleX(-1) rotate(-45deg); }
+.alert--info {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  font-size: 20px;
+  text-align: center;
+  padding: 0;
+  background: #80c9e2;
+  color: #fff;
+  -webkit-animation: alertAnimation 1s linear 1s forwards;
+  animation: alertAnimation 1s linear 1s forwards; }
+  .alert--info:before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    content: "i";
+    font-size: 30px;
+    margin: 0 auto 15px;
+    border: 2px solid #fff;
+    border-radius: 100%; }
+.alert--warning {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  font-size: 20px;
+  text-align: center;
+  padding: 0;
+  background: #fadc79;
+  color: #fff;
+  -webkit-animation: alertAnimation 1s linear 1s forwards;
+  animation: alertAnimation 1s linear 1s forwards; }
+  .alert--warning:before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    content: "!";
+    font-size: 30px;
+    margin: 0 auto 15px;
+    border: 2px solid #fff;
+    border-radius: 100%; }
+.alert--error {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  font-size: 20px;
+  text-align: center;
+  padding: 0;
+  background: #ef4539;
+  color: #fff;
+  -webkit-animation: alertAnimation 1s linear 1s forwards;
+  animation: alertAnimation 1s linear 1s forwards; }
+  .alert--error:before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    content: "×";
+    font-size: 30px;
+    margin: 0 auto 15px;
+    border: 2px solid #fff;
+    border-radius: 100%; }
+
 /*   BUTTONS
 ______________________ */
 .btn--default, .btn--error, .btn--primary, .btn--secondary {
   display: block;
   width: 100%;
   max-width: 345px;
-  font-family: "Akkurat Pro";
+  font-family: "Akkurat Pro", Arial;
   font-size: 18px;
   text-align: center;
   margin: 0 auto;
@@ -92,12 +221,12 @@ ______________________ */
 /*   FORMS
 ______________________ */
 .form__input, .form__radio-btn label, .form__radio-btn input {
-  font-family: "Akkurat Light Pro";
+  font-family: "Akkurat Light Pro", Arial;
   background: #fff;
   border: 1px solid #ebe9f0;
   border-radius: 0; }
 
-.form__radio-btn input[type=radio]:checked + label, .form__radio-btn:focus label, .form__radio-btn:hover label {
+.form__radio-btn input[type=radio]:checked + label, .form__radio-btn:focus label, .form__radio-btn:hover label, .form__radio-btn input:focus + label {
   background: #1ea98f;
   color: #fff;
   -webkit-transition: all 0.5s;
@@ -110,6 +239,7 @@ ______________________ */
   color: #808184; }
 
 .form__input {
+  width: 100%;
   font-size: 18px;
   margin-bottom: 15px;
   padding: 10px 16px;
@@ -149,8 +279,10 @@ select:-moz-focusring {
     bottom: 0;
     right: 0;
     width: 100%;
+    height: 100%;
     opacity: 0;
-    -webkit-appearance: none; }
+    -webkit-appearance: none;
+    -moz-appearance: none; }
   .form__radio-btn:focus, .form__radio-btn:hover {
     cursor: pointer; }
     .form__radio-btn:focus input, .form__radio-btn:hover input {
@@ -686,7 +818,7 @@ ______________________ */
     width: 27px;
     height: 27px;
     content: '?';
-    font-family: "Akkurat Pro";
+    font-family: "Akkurat Pro", Arial;
     font-size: 18px;
     color: #ccc;
     border: 2px solid #ccc;
