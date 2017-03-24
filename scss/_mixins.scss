@@ -12,6 +12,11 @@ ______________________ */
   margin: $margin;
 }
 
+@mixin animation($animation: alertAnimation 1s linear 1s forwards) {
+  -webkit-animation: $animation;
+  animation: $animation;
+}
+
 @mixin keyframes($name) {
   @-moz-keyframes #{$name} {
     @content;
