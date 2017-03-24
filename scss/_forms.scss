@@ -24,6 +24,7 @@ ______________________ */
 
 .form__input {
   @extend %inputStyle;
+  width: 100%;
   font-size: $font--input;
   margin-bottom: 15px;
   padding: 10px 16px;
@@ -90,5 +91,8 @@ select:-moz-focusring {
     input {
       cursor: pointer;
     }
+  }
+  input:focus + label {
+    @extend %checkedRadioBtn;
   }
 }
