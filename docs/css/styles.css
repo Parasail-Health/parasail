@@ -915,6 +915,23 @@ ______________________ */
   align-self: baseline;
 }
 
+/*   HELPER CLASSES
+______________________ */
+.align--left {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.align--center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.align--right {
+  margin-right: 0;
+  margin-left: auto;
+}
+
 /*   ICONS
 ______________________ */
 .icon__arrow:before, .icon__question-mark:before {
@@ -1468,6 +1485,12 @@ code {
   padding: 2px 5px;
 }
 
+.alert--success, .alert--info, .alert--warning, .alert--error {
+  height: auto;
+  padding: 25px 15px;
+  animation: none;
+}
+
 .hero {
   height: 400px;
   margin-top: 108px;
@@ -1696,15 +1719,6 @@ code {
   padding: 10px;
 }
 
-.bem__explanation-list {
-  margin-top: 50px;
-}
-
-.bem__explanation-list li {
-  font-size: 20px;
-  line-height: 3;
-}
-
 .grid-system__columns .example {
   margin-top: 50px;
 }
@@ -1712,6 +1726,18 @@ code {
 .ordered-list,
 .unordered-list {
   margin-left: 10px;
+}
+
+.bem .subsection {
+  margin: 45px 0 0;
+}
+
+.buttons .example {
+  padding: 15px 0;
+}
+
+.alerts .example__code {
+  margin: 35px 0 55px;
 }
 
 footer {

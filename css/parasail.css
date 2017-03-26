@@ -776,6 +776,20 @@ ______________________ */
 .align-self-baseline {
   align-self: baseline; }
 
+/*   HELPER CLASSES
+______________________ */
+.align--left {
+  margin-right: auto;
+  margin-left: 0; }
+
+.align--center {
+  margin-right: auto;
+  margin-left: auto; }
+
+.align--right {
+  margin-right: 0;
+  margin-left: auto; }
+
 /*   ICONS
 ______________________ */
 .icon__arrow:before, .icon__question-mark:before {
