@@ -180,6 +180,16 @@ code {
   background: #dedede;
   padding: 2px 5px;
 }
+.alert {
+  &--success,
+  &--info,
+  &--warning,
+  &--error {
+    height: auto;
+    padding: 25px 15px;
+    animation: none;
+  }
+}
 
 .hero {
   height: 400px;
@@ -253,7 +263,7 @@ code {
         }
         &:not(:first-child) {
           display: block;
-          margin-left: 107px;
+          margin-left: 142px;
         }
       }
       &:nth-child(1) code:first-child {
@@ -268,7 +278,7 @@ code {
       &:nth-child(4) code:first-child {
         margin-left: 5px;
       }
-      @media only screen and (max-width: 530px) {
+      @media only screen and (max-width: 570px) {
         code {
           &:first-child {
             display: block;
@@ -369,19 +379,23 @@ code {
   display: block;
   padding: 10px;
 }
-.bem__explanation-list {
-  margin-top: 50px;
-  li {
-    font-size: 20px;
-    line-height: 3;
-  }
-}
 .grid-system__columns .example {
   margin-top: 50px;
 }
 .ordered-list,
 .unordered-list {
   margin-left: 10px;
+}
+.bem .subsection {
+  margin: 45px 0 0;
+}
+.buttons .example {
+  padding: 15px 0;
+}
+.alerts {
+  .example__code {
+    margin: 35px 0 55px;
+  }
 }
 
 footer {

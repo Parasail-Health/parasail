@@ -1,0 +1,56 @@
+/*   ALERTS
+______________________ */
+
+
+@include keyframes(alertAnimation) {
+  0% {
+    height: 0;
+    padding: 0;
+  }
+  100% {
+    height: auto;
+    padding: 25px 15px;
+  }
+}
+
+@mixin alert($bg: $alert--success, $content: 'L') {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  font-size: 20px;
+  text-align: center;
+  padding: 0;
+  background: $bg;
+  color: $alert__text;
+  @include animation;
+  &:before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    content: $content;
+    font-size: 30px;
+    margin: 0 auto 15px;
+    border: 2px solid $alert__text;
+    border-radius: 100%;
+  }
+}
+
+.alert {
+  &--success {
+    @include alert;
+    &:before {
+      transform: scaleX(-1) rotate(-45deg);
+    }
+  }
+  &--info {
+    @include alert($alert--info, 'i');
+  }
+  &--warning {
+    @include alert($alert--warning, '!');
+  }
+  &--error {
+    @include alert($alert--error, '\00d7');
+  }
+}

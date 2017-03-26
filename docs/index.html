@@ -5,7 +5,7 @@
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Parasail Beauty</title>
+	<title>Parasail</title>
 	<meta name="description" content="" />
 
 	<link rel="icon" type="image/png" href="favicon.png" />
@@ -48,18 +48,26 @@
 					<dd>
 						<a href="#buttons"><span>09</span> Buttons</a>
 					</dd>
-					
 					<dd>
-						<a href="#logos"><span>10</span> Logos</a>
+						<a href="#alerts"><span>10</span> Alerts</a>
 					</dd>
 					<dd>
-						<a href="#icons"><span>11</span> Icons</a>
+						<a href="#logos"><span>11</span> Logos</a>
 					</dd>
 					<dd>
-						<a href="#lists"><span>12</span> Lists</a>
+						<a href="#icons"><span>12</span> Icons</a>
 					</dd>
 					<dd>
-						<a href="#best-ptractices"><span>13</span> Best Practices in CSS</a>
+						<a href="#lists"><span>13</span> Lists</a>
+					</dd>
+					<dd>
+						<a href="#helper"><span>14</span> Helper Classes</a>
+					</dd>
+					<dd>
+						<a href="#support"><span>15</span> Browser Support</a>
+					</dd>
+					<dd>
+						<a href="#best-ptractices"><span>16</span> Best Practices in CSS</a>
 					</dd>
 				</dl>
 			</nav>
@@ -99,26 +107,34 @@
 					<li>
 						<a href="#forms"><span>07</span> Forms</a>
 					</li>
-				</div>
-				<div class="grid__col-sm-6 grid__col-xs-12">
 					<li>
 						<a href="#typography"><span>08</span> Typography</a>
 					</li>
+				</div>
+				<div class="grid__col-sm-6 grid__col-xs-12">
 					<li>
 						<a href="#buttons"><span>09</span> Buttons</a>
 					</li>
-					
 					<li>
-						<a href="#logos"><span>10</span> Logos</a>
+						<a href="#alerts"><span>10</span> Alerts</a>
 					</li>
 					<li>
-						<a href="#icons"><span>11</span> Icons</a>
+						<a href="#logos"><span>11</span> Logos</a>
 					</li>
 					<li>
-						<a href="#lists"><span>12</span> Lists</a>
+						<a href="#icons"><span>12</span> Icons</a>
 					</li>
 					<li>
-						<a href="#best-ptractices"><span>13</span> Best Practices in CSS</a>
+						<a href="#lists"><span>13</span> Lists</a>
+					</li>
+					<li>
+						<a href="#helper"><span>14</span> Helper Classes</a>
+					</li>
+					<li>
+						<a href="#support"><span>15</span> Browser Support</a>
+					</li>
+					<li>
+						<a href="#best-ptractices"><span>16</span> Best Practices in CSS</a>
 					</li>
 				</div>
 			</ol>
@@ -173,8 +189,8 @@
 			<h2 class="text--center">03 - Naming Convention - BEM</h2>
 			<p>BEM stands for Block, Element, Modifier, it is a naming convention for classes in HTML and CSS which assists you to write modular CSS. The goal of BEM is, to help developers better understand the relationship between HTML and CSS by quickly giving them an idea of which element depends on another.</p>
 			<p>BEM is successful not because it gives you a lot of options but because it limits what you are allowed to do. The problem it's trying to avoid is getting your rules to match the elements you want, without them accidentally matching the elements you don’t want to affect.</p>
-			<ul class="bem__explanation-list">
-				<li><code>Block</code> is a top-level abstraction of a new component.</li>
+			<div class="subsection">
+				<p><code>Block</code> is a top-level abstraction of a new component.</p>
 				<div class="example__code">
 					<code class="code--white"><</code>
 					<code class="code--pink">button </code>
@@ -187,7 +203,10 @@
 					<code class="code--pink">button</code>
 					<code class="code--white">></code>
 				</div>
-				<li><code>Element</code> depends upon the block.</li>
+			</div>
+
+			<div class="subsection">
+				<p><code>Element</code> depends upon the block.</p>
 				<div class="example__code">
 					<code class="code--white"><</code>
 					<code class="code--pink">button </code>
@@ -211,7 +230,10 @@
 					<code class="code--pink">button</code>
 					<code class="code--white">></code>
 				</div>
-				<li><code>Modifier</code> changes the style of the block.</li>
+			</div>
+
+			<div class="subsection">
+				<p><code>Modifier</code> changes the style of the block.</p>
 				<div class="example__code">
 					<code class="code--white"><</code>
 					<code class="code--pink">button </code>
@@ -224,7 +246,7 @@
 					<code class="code--pink">button</code>
 					<code class="code--white">></code>
 				</div>
-			</ul>
+			</div>
 			<p>If you want to read more about BEM, check out the <a href="//getbem.com/introduction/" target="_blank">Get BEM introduction</a>.</p>
 		</section>
 		<section id="technologies" class="technologies">
@@ -253,22 +275,31 @@
 			<div class="subsection">
 				<h3>Grid columns</h3>
 				<article class="grid-system__columns">
-					<h4>.grid_col-x</h4>
-					<p>Different column sizes can be defined by using <code>.grid__col-1</code> to <code>.grid__col-12</code>, with <code>.grid__col-1</code> being the smallest column size and <code>.grid__col-12</code> taking up 100% of its parent container.</p>
-					<p><code>.grid__col-auto</code> creates a column that will take up however much space is left in the row.</p>
-					<ul class="grid direction-column example">
-						<li class="grid__col-1">.grid__ col-1</li>
+					<div class="subsection">
+						<h4>.grid_col-x</h4>
+						<p>Different column sizes can be defined by using <code>.grid__col-1</code> to <code>.grid__col-12</code>, with <code>.grid__col-1</code> being the smallest column size and <code>.grid__col-12</code> taking up 100% of its parent container.</p>
+						<ul class="grid direction-column example">
+							<li class="grid__col-1">.grid__ col-1</li>
+							<li class="grid__col-2">.grid__col-2</li>
+							<li class="grid__col-3">.grid__col-3</li>
+							<li class="grid__col-4">.grid__col-4</li>
+							<li class="grid__col-5">.grid__col-5</li>
+							<li class="grid__col-6">.grid__col-6</li>
+							<li class="grid__col-7">.grid__col-7</li>
+							<li class="grid__col-8">.grid__col-8</li>
+							<li class="grid__col-9">.grid__col-9</li>
+							<li class="grid__col-10">.grid__col-10</li>
+							<li class="grid__col-11">.grid__col-11</li>
+							<li class="grid__col-12">.grid__col-12</li>
+						</ul>
+					</div>
+
+					<h4>.grid_col-auto</h4>
+					<p><code>.grid__col-auto</code> creates a column that will take up however much space is left in the row. If the row has multiple <code>.grid__col-auto</code> columns, the space gets divided up evenly between the columns.</p>
+					<ul class="grid example">
 						<li class="grid__col-2">.grid__col-2</li>
-						<li class="grid__col-3">.grid__col-3</li>
-						<li class="grid__col-4">.grid__col-4</li>
-						<li class="grid__col-5">.grid__col-5</li>
 						<li class="grid__col-6">.grid__col-6</li>
-						<li class="grid__col-7">.grid__col-7</li>
-						<li class="grid__col-8">.grid__col-8</li>
-						<li class="grid__col-9">.grid__col-9</li>
-						<li class="grid__col-10">.grid__col-10</li>
-						<li class="grid__col-11">.grid__col-11</li>
-						<li class="grid__col-12">.grid__col-12</li>
+						<li class="grid__col-auto">.grid__col-auto</li>
 					</ul>
 					<ul class="grid example" style="margin: 0;">
 						<li class="grid__col-auto">.grid__col-auto</li>
@@ -457,7 +488,7 @@
 				<p><code>Align-items</code> defines how flex items are aligned along the cross-axis (which is by default vertically, top to bottom) when they don't take up all of the available space in the container. It is the justify-content version for the cross-axis.</p>
 				<article>
 					<h4>.align-stretch</h4>
-					<p>Default value, it stretches the height of the flex item to fit the container (still respects min-width/max-width)</p>
+					<p>Default value, it stretches the height of the flex item to fit the container (still respects min-width/max-width).</p>
 					<ul class="grid align-stretch example">
 						<li class="grid__col-3">.grid__col-3</li>
 						<li class="grid__col-4">
@@ -527,7 +558,7 @@
 				<p><code>Align Self</code> accepts the same 5 values as <code>align items</code>, with the difference that you apply it to individual flex items in order to overwrite <code>align items</code>.</p>
 				<article>
 					<h4>.align-self-stretch</h4>
-					<p>Default value, it stretches the height of the flex item to fit the container (still respects min-width/max-width)</p>
+					<p>Default value, it stretches the height of the flex item to fit the container (still respects min-width/max-width).</p>
 					<ul class="grid align-start example">
 						<li class="grid__col-4 align-self-stretch">.align-self-stretch</li>
 						<li class="grid__col-4">
@@ -743,27 +774,82 @@
 		<section id="buttons" class="buttons">
 			<h2 class="text--center">09 - Buttons</h2>
 			<p>The theme currently includes 4 different button styles, you can update the colors as well as the font-size in the <code>_variables.scss</code> file.</p>
-			<ul class="grid">
-				<li class="grid__col-md-6 grid__col-xs-12">
-					<h4>.btn--primary</h4>
-					<button class="btn--primary">Primary</button>
-				</li>
-				<li class="grid__col-md-6 grid__col-xs-12">
-					<h4>.btn--default</h4>
-					<button class="btn--default">Default</button>
-				</li>
-				<li class="grid__col-md-6 grid__col-xs-12">
-					<h4>.btn--secondary</h4>
-					<button class="btn--secondary">Secondary</button>
-				</li>
-				<li class="grid__col-md-6 grid__col-xs-12">
-					<h4>.btn--error</h4>
-					<button class="btn--error">Error</button>
-				</li>
-			</ul>
+			<div class="subsection">
+				<ul class="grid">
+					<li class="grid__col-md-6 grid__col-xs-12">
+						<h4>.btn--primary</h4>
+						<button class="btn--primary">Primary</button>
+					</li>
+					<li class="grid__col-md-6 grid__col-xs-12">
+						<h4>.btn--default</h4>
+						<button class="btn--default">Default</button>
+					</li>
+					<li class="grid__col-md-6 grid__col-xs-12">
+						<h4>.btn--secondary</h4>
+						<button class="btn--secondary">Secondary</button>
+					</li>
+					<li class="grid__col-md-6 grid__col-xs-12">
+						<h4>.btn--error</h4>
+						<button class="btn--error">Error</button>
+					</li>
+				</ul>
+			</div>
+
+			<h3>Example:</h3>
+			<div class="example__code">
+				<code class="code--white"><</code>
+				<code class="code--pink">button </code>
+				<code class="code--green">class</code>
+				<code class="code--white">=</code>
+				<code class="code--yellow">"btn--default"</code>
+				<code class="code--white">></code>
+				<code class="code--white">Default</code>
+				<code class="code--white">&lt;/</code>
+				<code class="code--pink">button</code>
+				<code class="code--white">></code>
+			</div>
 		</section>
+		<section id="alerts" class="alerts">
+      <h2 class="text--center">10 - Alerts</h2>
+
+      <div class="subsection">
+        <p>Use one of these 4 alert classes if you need to display a notification message to the user.</p>
+        <article>
+          <h4>.alert--success</h4>
+          <div class="alert--success">This is a success message</div>
+        </article>
+        <article>
+          <h4>.alert--info</h4>
+          <div class="alert--info">This is an info message</div>
+        </article>
+        <article>
+          <h4>.alert--warning</h4>
+          <div class="alert--warning">This is a warning message</div>
+        </article>
+        <article>
+          <h4>.alert--error</h4>
+          <div class="alert--error">
+            This is an error message
+          </div>
+        </article>
+      </div>
+
+      <h3>Example:</h3>
+			<div class="example__code">
+				<code class="code--white"><</code>
+				<code class="code--pink">div </code>
+				<code class="code--green">class</code>
+				<code class="code--white">=</code>
+				<code class="code--yellow">"alert--success"</code>
+				<code class="code--white">></code>
+				<code class="code--white">This is a success message</code>
+				<code class="code--white">&lt;/</code>
+				<code class="code--pink">div</code>
+				<code class="code--white">></code>
+			</div>
+    </section>
 		<section id="logos" class="logos">
-			<h2 class="text--center">10 - Logos</h2>
+			<h2 class="text--center">11 - Logos</h2>
 
 			<div class="subsection">
 				<p>By default the theme is loading the Parasail logo and gives you the option to use it in 3 different sizes. Simply go into the <code>_variables.scss</code> file and change the <code>$logo</code> variable to load your own logo. If you want to change the width and height ratio, you can do this by changing the values in the <code>_logos.scss</code> file.</p>
@@ -784,7 +870,7 @@
 			</div>
 		</section>
 		<section id="icons" class="icons">
-			<h2 class="text--center">11 - Icons</h2>
+			<h2 class="text--center">12 - Icons</h2>
 			<p>These are some icons we currently use, you can update the colors as well as the font-sizes in the <code>_variables.scss</code> file.</p>
 			<article>
 				<h4>.icon__arrow</h4>
@@ -835,7 +921,7 @@
 			</article>
 		</section>
 		<section id="lists" class="lists">
-			<h2 class="text--center">12 - Lists</h2>
+			<h2 class="text--center">13 - Lists</h2>
 			<article>
 				<h4>.ordered-list</h4>
 				<p>The list items are marked with numbers.</p>
@@ -855,8 +941,45 @@
 				</ol>
 			</article>
 		</section>
+		<section id="helper" class="helper">
+			<h2 class="text--center">14 - Helper Classes</h2>
+			<div class="subsection">
+				<h3>Alignment</h3>
+				
+				<div class="subsection">
+					<h4>.align--left</h4>
+					<p>Aligns block elements to the left.</p>
+					<div class="example">
+						<button class="btn--primary align--left">Block aligned left</button>
+					</div>
+				</div>
+
+				<div class="subsection">
+					<h4>.align--center</h4>
+					<p>Centeres block elements.</p>
+					<div class="example">
+						<button class="btn--primary align--center">Block centered</button>
+					</div>
+				</div>
+
+				<div class="subsection">
+					<h4>.align--right</h4>
+					<p>Aligns block elements to the right.</p>
+					<div class="example">
+						<button class="btn--primary align--right">Block aligned right</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="support" class="support">
+			<h2 class="text--center">15 - Browser Support</h2>
+			<p>The Parasail framework uses Flexbox, the included grid system, for example, is based entirely on Flexbox. Flexbox is supported by all major browsers, as well as IE10 and higher, with the exception of Opera mini.</p>
+			<p>Every project targets a different audience. Therefore, browser support is something that needs to be decided on an individual basis. Parasail focuses on providing a lightweight CSS framework that can be used for any project, for the simple reason that we do not wish to decide between which browsers to support.</p>
+			<p>For supporting older browsers for your project, we recommend using <a href="https://github.com/postcss/autoprefixer" target="_blank">Autoprefixer</a>. Autoprefixer is an amazing tool that lets you specify which browser version you want to support, and automatically prefixes your CSS with the correct vendor prefixes.</p>
+			<p>If you are looking to support IE9 and lower, you will need to add a polyfill such as <a href="https://github.com/jonathantneal/flexibility" target="_blank">Flexibility</a>.</p>
+		</section>
 		<section id="best-ptractices" class="best-ptractices">
-			<h2 class="text--center">13 - Best Practices in CSS</h2>
+			<h2 class="text--center">16 - Best Practices in CSS</h2>
 
 			<div class="subsection">
 				<h3>Formatting</h3>
@@ -886,38 +1009,39 @@
 					<li>Write comments for code that isn't self-documenting (for example Browser hacks)</li>
 					<li>When writing comments in SASS, keep in mind that comments using the double slash ( <code>// Double slash comment</code> ) will not be compiled to regular CSS while comments using the slash + asterix ( <code>/* Comment using slash + asterix */</code> ) will be compiled.</li>
 				</ul>
-				<div class="example__code">
+			</div>
+
+			<h3>Example:</h3>
+			<div class="example__code">
+				<p>
+					<code class="code--green">.grid</code>
+					<code class="code--white">,</code>
+				</p>
+				<p><code class="code--green">.grid__col-auto </code>
+					<code class="code--white">{</code>
+				</p>
+					<p><code class="code--grey" style="padding-left: 50px;">// display: inline-block added for IE support</code></p>
 					<p>
-						<code class="code--green">.grid</code>
-						<code class="code--white">,</code>
+						<code class="code--blue" style="padding-left: 50px;">display</code>
+						<code class="code--white">:</code>
+						<code class="code--blue">inline</code>
+						<code class="code--white">-</code>
+						<code class="code--blue">block</code>
+						<code class="code--white">;</code>
 					</p>
-					<p><code class="code--green">.grid__col-auto </code>
-						<code class="code--white">{</code>
-					</p>
-						<p><code class="code--grey" style="padding-left: 50px;">// display: inline-block added for IE support</code></p>
-						<p>
-							<code class="code--blue" style="padding-left: 50px;">display</code>
-							<code class="code--white">:</code>
-							<code class="code--blue">inline</code>
-							<code class="code--white">-</code>
-							<code class="code--blue">block</code>
-							<code class="code--white">;</code>
-						</p>
-					<p><code class="code--white">}</code></p>
-				</div>
+				<p><code class="code--white">}</code></p>
 			</div>
 		</section>
 	</main>
 
 	<footer class="text--center">
-		<p>Parasail Health &copy 2016</p>
+		<p>Parasail Health &copy 2017</p>
 	</footer>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript">
 	  $('#nav__menu').click(function() {
 	  	$('#nav__menu').toggleClass('nav__menu--active');
-	  	console.log('bla');
 	  });
 		
 		$('.nav__menu dd a, .table-of-content ol li a').click(function(e){
