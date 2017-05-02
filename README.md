@@ -140,25 +140,25 @@ The grid system lets you create responsive layouts easily by giving you the opti
 
 #### Large: Viewport ≥ 1200px
 - Column classes: `.grid__col-lg-1` to `.grid__col-lg-12`
-- Column Offset classes: `.grid__col-offset-lg-1` to `.grid__col-offset-lg-12`
+- Column Offset classes: `.grid__col-lg-offset-1` to `.grid__col-lg-offset-12`
 <br/>
 
 #### Medium: Viewport ≥ 992px
 - Column classes: `.grid__col-md-1` to `.grid__col-md-12`
-- Column Offset classes: `.grid__col-offset-md-1` to `.grid__col-offset-md-12`
+- Column Offset classes: `.grid__col-md-offset-1` to `.grid__col-md-offset-12`
 <br/>
 
 #### Small: Viewport ≥ 768px
 - Column classes: `.grid__col-sm-1` to `.grid__col-sm-12`
-- Column Offset classes: `.grid__col-offset-sm-1` to `.grid__col-offset-sm-12`
+- Column Offset classes: `.grid__col-sm-offset-1` to `.grid__col-sm-offset-12`
 <br/>
 
 #### Extra Small: Viewport ≤ 767px
 - Column classes: `.grid__col-xs-1` to `.grid__col-xs-12`
-- Column Offset classes: `.grid__col-offset-xs-1` to `.grid__col-offset-xs-12`
+- Column Offset classes: `.grid__col-xs-offset-1` to `.grid__col-xs-offset-12`
 <br/>
 
-Using elements with the class `.grid__col-lg-x` defines column widths for the large viewport (min-width: 1200px) and `.grid__col-offset-lg-x` will offset those columns. `.grid-col-md-x` and `.grid-col-offset-md-x` will affect viewports with a min-width of 992px. Elements with the class `.grid__col-sm-x` or `.grid__col-offset-sm-x` will affect the small viewport (min-width: 768px) and `.grid__col-xs-x` defines columns width for the extra small viewport (max-width: 767px) which can be offset with `.grid__col-xs-x`.
+Using elements with the class `.grid__col-lg-x` defines column widths for the large viewport (min-width: 1200px) and `.grid__col-lg-offset-x` will offset those columns. `.grid-col-md-x` and `.grid-col-md-offset-x` will affect viewports with a min-width of 992px. Elements with the class `.grid__col-sm-x` or `.grid__col-sm-offset-x` will affect the small viewport (min-width: 768px) and `.grid__col-xs-x` defines columns width for the extra small viewport (max-width: 767px) which can be offset with `.grid__col-xs-offset-x`.
 <br/>
 <br/>
 <br/>
